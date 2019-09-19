@@ -1,6 +1,10 @@
 <footer>
     <h2>Taverna E-commerce</h2>
-    <a href="contato.php">Contato</a>
+    <a href="contato.php">Contato</a><br>
+    <a href="faq.php">FAQ</a>
+
+
+
 </footer>
 
 
