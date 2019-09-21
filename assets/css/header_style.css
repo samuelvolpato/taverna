@@ -1,0 +1,89 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Montserrat,sans-serif;
+    font-size: 14px;
+    list-style: none;
+}
+body {
+    background-color: #100E11; 
+}
+/* NAVBAR */
+.navPrincipal {
+    background-color: #100E11;
+}
+
+.navPrincipalTop {
+    background-color: #1c1c1c;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 0;
+    height: 50px;
+}
+
+.menuCollapse{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    /* margin-top: 20px; */
+}
+.menuCollapse li {
+    
+}
+
+.menuCollapse li a,
+a:hover {
+    text-decoration: none;
+    color: #ffff;
+    padding: 0 8px;
+}
+
+.efeitoLink::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ffff;
+    transition: width .3s;
+}
+
+.efeitoLink:hover::after {
+    width: 100%;
+    transition: width .3s,
+}
+
+/* BOTÃO */
+.btnPadrao {
+    color: #ffff;
+    background-color: transparent;
+    border-color: #ffff;
+}
+
+.buscaPrincipal {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.userWishCart {
+    color: #ffff;
+    background-color: transparent;
+}
+
+.iconsNav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.dropMenuBg {
+    background-color: #151415;
+    border: 1px solid #ffff;
+}
+
+.dropMenuBg ul li a {
+    color: #ffff;
+}
