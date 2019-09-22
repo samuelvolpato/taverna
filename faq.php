@@ -28,6 +28,23 @@
           <p class="p-texto"> Significa que  - <em>YOU SHOULD NOT PASS!!!</em> </p>
         </div>
 
+        <div>
+         <details><h3 class="h3-faq"> Como devo proceder para executar o cadastro?</h3></details>
+         <p class="p-texto"> Acesse o nosso link Cadastro acima no nosso menu ou clique <a href="cadastro.php">aqui</a></p>
+       </div>
+
+       <div>
+         <details> <h3 class="h3-faq"> Porque o nome Taverna?</h3></details>
+         <p class="p-texto">  Tentamos dar uma experiência maior ao nosso usuário com ambiente medieval , com influências de jogos de RPG</p>
+       </div>
+
+       <div>
+         <details><h3 class="h3-faq"> Posso ter uma conta de cliente e vendedor? </h3></details>
+         <p class="p-texto"> Não será necessário, você terá uma página de perfil, onde pode adicionar produtos para vender </p>
+       </div>
+
+
+
       </section>
 
         
