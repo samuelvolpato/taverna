@@ -15,8 +15,14 @@ body {
     background-color: #100E11;
 }
 
+/* PESQUISA DA NAVBAR */
+
+::placeholder {
+    color: #ffff;
+}
+
 .navPrincipalTop {
-    background-color: #1c1c1c;
+    background-color: #100E11;
     display: flex;
     justify-content: center;
     padding-top: 20px;
@@ -76,7 +82,7 @@ a:hover {
 .iconsNav {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 .dropMenuBg {
@@ -86,4 +92,41 @@ a:hover {
 
 .dropMenuBg ul li a {
     color: #ffff;
+}
+
+.midiasSociais {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
+.tavernaFooter {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+
+}
+
+.midiasSociais .fab {
+    font-size: 2em;
+    color: #ffff;
+}
+
+.linksFooter {
+    color: #ffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+footer {
+    background-color: #100E11;
+}
+
+footer span .fab {
+    font-size: 20px;
 }

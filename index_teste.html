@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- Estilo Bootstrap -->
+    <link async defer rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Estilo FontAweomse -->
+    <link async defer rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- Estilo e Favicon -->
+    <link rel="stylesheet" href="assets\css\header_style.css">
+    <link rel="icon" href="assets/img/favicon_taverna_48x48.png" sizes="96x96" type="image/png">
+
+    <style>
+        * {
+            /* border: .5px solid forestgreen; */
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container-fluid">
+
+        <header>
+            <div class="pos-f-t d-flex flex-wrap flex-row sticky-top">
+
+                <nav class="navbar navPrincipal col-12 py-2">
+                    <button class="btn btnPadrao navbar-toggler border-0 m-0 p-0" type="button" data-toggle="collapse"
+                        data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                        aria-expanded="false" aria-label="Alterna navegação">
+                        <i class="fas fa-bars "></i>
+                    </button>
+
+                    <div class="col-2 p-0 mx-3" title="Taverna.com">
+                        <img src="assets\img\taverna_com_logo.svg" alt="">
+                    </div>
+                    <div class="col-5 p-0">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-transparent text-white"
+                                placeholder="Busque por produtos, marcas e muito mais...">
+                            <div class="input-group-append">
+                                <button type="submit" class="btn btnPadrao border-0"><i
+                                        class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="iconsNav m-0 mx-0 p-0 col-2">
+                        <li class="btn btnPadrao border-0" title="Acesse sua conta" id="dropdownMenu"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+                                class="fas fa-user-circle"></i></li>
+                        <div class="dropdown-menu dropMenuBg" aria-labelledby="dropDownMenu">
+                            <ul class="pl-2">
+                                <li><a href="" class="efeitoLink">.entrar</a></li>
+                                <li><a href="" class="efeitoLink" title="Facebook">.entrar com <i
+                                            class="fab fa-facebook"></i></a></li>
+                                <li><a href="" class="efeitoLink" title="Google">.entrar com <i
+                                            class="fab fa-google"></i></a></li>
+                                <li><a href="" class="efeitoLink">.cadastrar</a></li>
+                                <div class="dropdown-divider"></div>
+                            </ul>
+                            <ul class="pl-2">
+                                <li><a href="" class="efeitoLink">.minha conta</a></li>
+                                <li><a href="" class="efeitoLink">.minhas compras</a></li>
+                            </ul>
+                        </div>
+                        <li class="btn btnPadrao border-0" title="Acesse seus favoritos"><i class="fas fa-heart"></i>
+                        </li>
+                        <li class="btn btnPadrao border-0" title="Acesse seu carrinho"><i
+                                class="fas fa-shopping-cart"></i>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="collapse" id="navbarToggleExternalContent">
+                    <div class="bg-dark p-0 d-flex justify-content-center">
+                        <div class="col navPrincipalTop">
+                            <ul class="menuCollapse ">
+                                <li><a href="" class="efeitoLink">.games</a></li>
+                                <li><a href="" class="efeitoLink">.colecionáveis</a></li>
+                                <li><a href="" class="efeitoLink">.moda</a></li>
+                                <li><a href="" class="efeitoLink">.informática</a></li>
+                                <li><a href="" class="efeitoLink">.livros e filmes</a></li>
+                                <li><a href="" class="efeitoLink font-weight-bold">.todos os departamentos</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- CAROUSEL DE DESTAQUES -->
+        <section class="row d-flex justify-content-center">
+
+            <div class="col-12 p-0 m-0 text-center bg-warning" style="height: 225px;">
+                <h1 class="text-white">carousel principal</h1>
+            </div>
+
+            <!-- CARDS PROMOCIONAIS -->
+            <div class="row p-0 m-0 bg-danger" style="height: 400px;">
+                <div class="col mx-3 my-3">
+                    <h3 class="text-white">card promocional</h3>
+                </div>
+                <div class="col mx-3 my-3">
+                    <h3 class="text-white">card promocional</h3>
+                </div>
+                <div class="col mx-3 my-3">
+                    <h3 class="text-white">card promocional</h3>
+                </div>
+                <div class="col mx-3 my-3">
+                    <h3 class="text-white">card promocional</h3>
+                </div>
+            </div>
+
+            <!-- FORMULÁRIO NEWSLETTER -->
+            <div class="col-12 bg-primary" style="height: 300px;">
+                <h1 class="text-white text-center">formulario newsletter</h1>
+            </div>
+
+            <!-- FORMULÁRIO NEWSLETTER -->
+            <div class="col-12 bg-secondary" style="height: 300px;">
+                <h1 class="text-white text-center">banner</h1>
+            </div>
+
+
+
+
+
+        </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+<footer class="d-flex row justify-content-center mt-3">
+
+    <div class="row m-0">
+        <ul class="linksFooter p-0 m-0 d-flex flex-wrap">
+            <li class="efeitoLink mx-3">.sobre nós</li>
+            <li class="efeitoLink mx-3">.dúvidas</li>
+            <li class="efeitoLink mx-3">.central de atendimento</li>
+            <li class="efeitoLink mx-3">.venda com a gente</li>
+        </ul>
+    </div>
+
+    <div class="row p-3" style="width: 100%">
+        <div class="col-4 p-0 text-center">
+            <img src="assets\img\taverna_com_logo.svg" class="p-3" alt="" title="Taverna.com" style="width: 50%">
+        </div>
+        <div class="col-4"></div>
+        <div class="col-4 d-flex align-self-center justify-content-center">
+            <span class="btn btnPadrao border-0 p-0 mx-3" title="Youtube"><i class="fab fa-youtube"></i></span>
+            <span class="btn btnPadrao border-0 p-0 mx-3" title="Facebook"><i class="fab fa-facebook"></i></span>
+            <span class="btn btnPadrao border-0 p-0 mx-3" title="Instagram"><i class="fab fa-instagram"></i></span>
+            <span class="btn btnPadrao border-0 p-0 mx-3" title="Twitter"><i class="fab fa-twitter-square"></i></span>
+        </div>
+    </div>
+</footer>
+
+</html>
