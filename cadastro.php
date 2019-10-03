@@ -1,6 +1,10 @@
+
+
+
+
 <?php require_once("inc/head.php") ?>
 <body>
-<?php require_once("inc/header.php") ?>
+<?php require_once("inc/header_teste.php") ?>
     <main>
 
         <div class="div-1">
@@ -39,4 +43,3 @@
     </main>
   <?php require_once("inc/footer.php"); ?>
   </body>
-</html>

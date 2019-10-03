@@ -30,7 +30,7 @@ body{
 }
 
 .div-form{
-    margin-top: 20px;
+    margin: 25px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -103,4 +103,27 @@ main .botoes-1{
 .section-sobre{
 
     margin: 10px 20px;
+}
+
+.produto_teste{
+
+   margin: 15px 15px;  
+
+}
+
+.produto_teste2{
+
+    margin: 25px 15px;  
+ 
+ }
+ 
+
+.form-produto-teste{
+
+    color:white;
+}
+
+.formulario-teste{
+
+    margin-top: 20px;
 }

@@ -8,7 +8,7 @@
     <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="index.php"><img class=logo src="assets/img/logo_taverna_72dpi.png" alt="Logo"><span class="sr-only">(página atual)</span></a>
+          <a class="nav-link" href="index.php"><img class=logo src="../assets/img/logo_taverna_72dpi.png" width="50" alt="Logo"><span class="sr-only">(página atual)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="cadastro.php">Cadastro</a>
