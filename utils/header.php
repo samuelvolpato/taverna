@@ -23,7 +23,7 @@
                         <a href="" class="text-white efeitoLink">.entrar</a>
                         <a href="" class="text-white efeitoLink">.entrar com <i class="fab fa-facebook"></i></a>
                         <a href="" class="text-white efeitoLink">.entrar com <i class="fab fa-google"></i></a>
-                        <a href="" class="text-white efeitoLink">.cadastrar</a>
+                        <a href="cadastrar.php" class="text-white efeitoLink">.cadastrar</a>
 
                     </div>
                     <li class="nav-item btn btnPadrao nav-item border-0 mx-4" title="Acessar wishlist"><i class="fas fa-heart"></i></li>
