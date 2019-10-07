@@ -20,16 +20,17 @@
  <?php require_once("../inc/header.php") ?>
    
  <main>
-     <section class="produto_teste d-flex justify-content-around">
-         <article>
+ 
+     <section class="produto_teste d-flex justify-content-around container flex-wrap">
+         <article class="row">
             <div><img src="img/controle_switch01.jpg" alt="controle_switch01" width="300"></div>
 
 
          </article>
-         <article class="form-produto-teste">
+         <article class="form-produto-teste row align-items-center">
              <form action="" class="formulario-teste" method="POST">
              <label for="">Descrição do produto</label><br>
-             <p>Preço</p><br>
+             <p>Preço R$ XXXX</p><br>
              <label for="quantidade">Quantidade</label><br>
               <input class="form-control" type="number" name="quantidade" id="quantidade"><br>
              <button type="submit">Comprar</button> 
@@ -39,7 +40,7 @@
 
          </article>
      </section>
-      
+   
       <section class="produto_teste2">
          
    
