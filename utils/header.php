@@ -20,7 +20,7 @@
                 <ul class="nav navbar-pills flex-nowrap p-0 justify-content-center">
                     <li class="nav-item btn btnPadrao nav-item border-0 mx-4" data-toggle="dropdown" title="Acessar sua conta"><i class="fas fa-user-circle"></i></li>
                     <div class="dropdown-menu bg-dark p-2 border">
-                        <a href="" class="text-white efeitoLink">.entrar</a>
+                        <a href="logar.php" class="text-white efeitoLink">.entrar</a>
                         <a href="" class="text-white efeitoLink">.entrar com <i class="fab fa-facebook"></i></a>
                         <a href="" class="text-white efeitoLink">.entrar com <i class="fab fa-google"></i></a>
                         <a href="cadastrar.php" class="text-white efeitoLink">.cadastrar</a>

@@ -1,4 +1,5 @@
 <html>
+<?php $pageTitle = "Taverna";?>
 <?php include_once('utils\head.php');?>
 
 <body>
