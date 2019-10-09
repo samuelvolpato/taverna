@@ -245,3 +245,10 @@ footer p {
     font-size: 20px;
     color: #ffff;
 }
+
+
+/* CLASSE PARA AJUSTAR IMG DA PAGINA GAME */
+.img-games {
+    height: 257px;
+    width: 257px;
+}

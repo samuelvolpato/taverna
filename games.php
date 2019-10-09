@@ -63,7 +63,7 @@
                     
                 <?php foreach ($produtosGames as $nomeGames => $infosGames) { ?>
                     <div class="col-lg-3 col-sm-6 m-0 p-3">
-                        <img src="<?php echo $infosGames[0]; ?>"  class="card-img-top" alt="<?php echo $infosGames[1]; ?>" width="500" heigth="500">
+                        <img src="<?php echo $infosGames[0]; ?>"  class=" card-img-top img-games" alt="<?php echo $infosGames[1]; ?>" width="500" heigth="500">
                         <div class="row justify-content-center mt-2 px-2">
                             <h5 class=" text-white"><?php echo $infosGames[1]; ?></h5>
                         </div>
