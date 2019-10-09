@@ -1,6 +1,6 @@
-<?php require_once("inc/head.php") ?>
+<?php require_once("utils/head.php") ?>
 <body>
-<?php require_once("inc/header.php") ?>
+<?php require_once("utils/header.php") ?>
     <main>
       
       <div id="titulo-faq" class="d-flex justify-content-center"> <p> FAQ Taverna </p></div>
@@ -32,6 +32,6 @@
 
         
     </main>
-  <?php require_once("inc/footer.php") ?>
+  <?php require_once("utils/footer.php") ?>
   </body>
 </html>
