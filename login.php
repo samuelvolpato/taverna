@@ -1,37 +1,82 @@
-<?php require_once("inc/head.php") ?>
+<html>
+    <?php $pageTitle = "Login do Cliente";?>    
+    <?php include_once('utils\head.php');?>
+    <body>
+        <main class="container-fluid">
 
-<body>
-  <?php require_once("inc/header.php") ?>
-  <main>
+            <div class="sticky-top">
+                <?php include_once('utils\header.php');?>
+            </div>
 
-    <div class="div-1">
-      <a href="" class="link">
-        <h2 id="selecionado" class="entrar">Entrar</h2>
-      </a>
-      <a href="cadastro.php" class="link">
-        <h2 class="entrar"> Cadastrar</h2>
-      </a>
-    </div>
 
-    <div class="botoes">
-      <button type="button" class="btn btn-danger botoes-1"> Entrar com facebook</button>
-      <button type="button" class="btn btn-danger botoes-1"> Entrar com google</button>
-    </div>
-    <div class="div-form">
-      <form action="">
+            
+            <div class="container mt-3 p-0 ">
 
-        <label for="email" class="labels">Email</label><br>
-        <input type="text" name="email" id="email" required placeholder="mail@mail.com"><br>
+                <div class="row p-0 mx-0 mb-3 justify-content-center">                
+                    <h1 class="text-white">Login do Cliente</h1>                  
+                </div>
 
-        <label for="Senha" class="labels">Senha</label><br>
-        <input type="password" name="senha" id="senha" required><br>
+                <div class="row p-0 m-0 justify-content-center">
+                    
+                    <form class="" action="">
 
-        <button type="submit" class="btn btn-primary enviar-btn">Enviar</button>
+                        <div class="form-group p-0 m-0">              
+                            <div class="col form-group">
+                                <label for="email" class="text-white">E-mail</label>
+                                <input type="email" id="email" placeholder="Ex. joaodasilva@gmail.com" class="form-control form-control-lg bg-transparent">
+                            </div>
+                        </div>
+            
+                        <div class="form-group p-0 m-0">              
+                            <div class="col form-group">
+                                <label for="password" class="text-white">Senha no Taverna</label>
+                                <input type="password" id="password" class="form-control form-control-lg bg-transparent">
+                                <small id="emailHelp" class="form-text text-white efeitoLink"> <a href="" class="">Esqueci minha senha</a></small>
+                            </div>
+                        </div>
+            
+                        <div class="container mx-0 mt-4">
+                            <button class="btn btnPadrao" type="submit">Continuar</button>
+                        </div>
 
-      </form>
-    </div>
-  </main>
-<?php require_once("inc/footer.php");?>
-</body>
+                        <div class="row text-center">
+                            <p class="col text-white">ou</p>
+                        </div>
 
+                        <div class="container mb-3">
+                            <button class="col btn btnPadrao" type="submit">Continuar com o <i class="fab fa-facebook-square"></i></button>
+                        </div>
+                        <div class="container mb-3">
+                            <button class="col btn btnPadrao" type="submit">Continuar com o <i class="fab fa-google"></i></button>
+                        </div>
+        
+                        <div class="container mx-0 my-4">                        
+                            <span class="text-white">
+                                Não tem cadastro? <a href="cadastro.php" class="border-0 text-white efeitoLink">Cadastre-se</a>
+                            </span>
+                        </div>
+                    </form>
+                </div>                
+                
+            </div>
+            
+
+
+            
+
+
+
+            
+
+
+
+            
+
+        </main>
+        <script>
+        // <!-- Init tooltips         -->
+        $('[data-toggle="tooltip"]').tooltip();
+        </script>
+    </body>
+<?php include_once('utils\footer.php');?>
 </html>

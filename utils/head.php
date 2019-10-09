@@ -13,7 +13,7 @@
     <link async defer rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!-- Estilo e Favicon -->
-    <link rel="stylesheet" href="assets\css\header_style.css">
+    <link rel="stylesheet" href="assets\css\style.css">
     <link rel="icon" href="assets/img/favicon_taverna_48x48.png" sizes="96x96" type="image/png">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

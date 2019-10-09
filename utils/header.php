@@ -5,7 +5,7 @@
             <div class="col-md-2 col-6 p-0  order-md-1 order-3">
                 <div class="row justify-content-start flex-nowrap p-0 m-0">                    
                     <button class=" col-1 btn btnPadrao border-0 " data-toggle="collapse" data-target="#navbarNav" aria-expanded="false" aria-controls="navbarNav" title="Taverna.com"><i class="fas fa-bars"></i></button>
-                    <a href="index_teste.php"><img src="assets\img\taverna_com_logo.svg" class="col-11 p-0 ml-2" title="Taverna.com"></a>
+                    <a href="index.php"><img src="assets\img\taverna_com_logo.svg" class="col-11 p-0 ml-2" title="Taverna.com"></a>
                 </div>                
             </div>
 
@@ -20,10 +20,10 @@
                 <ul class="nav navbar-pills flex-nowrap p-0 justify-content-center">
                     <li class="nav-item btn btnPadrao nav-item border-0 mx-4" data-toggle="dropdown" title="Acessar sua conta"><i class="fas fa-user-circle"></i></li>
                     <div class="dropdown-menu bg-dark p-2 border">
-                        <a href="logar.php" class="text-white efeitoLink">.entrar</a>
+                        <a href="login.php" class="text-white efeitoLink">.entrar</a>
                         <a href="" class="text-white efeitoLink">.entrar com <i class="fab fa-facebook"></i></a>
                         <a href="" class="text-white efeitoLink">.entrar com <i class="fab fa-google"></i></a>
-                        <a href="cadastrar.php" class="text-white efeitoLink">.cadastrar</a>
+                        <a href="cadastro.php" class="text-white efeitoLink">.cadastrar</a>
 
                     </div>
                     <li class="nav-item btn btnPadrao nav-item border-0 mx-4" title="Acessar wishlist"><i class="fas fa-heart"></i></li>

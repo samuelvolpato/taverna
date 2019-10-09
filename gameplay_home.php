@@ -1,4 +1,5 @@
 <html>
+<?php $pageTitle = "Gameplay";?>
     <?php include_once('utils\head.php');?>
     
     <body>
