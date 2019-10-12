@@ -3,7 +3,7 @@
 <?php include_once('utils\head.php');?>
 
 <body>
-    <?php include_once('utils\produtosGames.php'); ?>
+    <?php include_once('utils\produtosLivros.php'); ?>
 
     <main class="container-fluid">
         <div class="sticky-top">
@@ -62,11 +62,11 @@
             <div class="row m-0 px-0 py-2" style="width: 100%">
            
                
-                <?php foreach ($produtosGames as $nomeGames => $infosGames) { ?>
+                <?php foreach ($produtosLivros as $nomeLivros => $infosLivros) { ?>
                     <div class="col-lg-3 col-sm-6 m-0 p-3">
-                        <img src="<?php echo $infosGames[0]; ?>"  class=" card-img-top img-games" alt="<?php echo $infosGames[1]; ?>" width="500" heigth="500">
+                        <img src="<?php echo $infosLivros[0]; ?>"  class=" card-img-top img-games" alt="<?php echo $infosLivros[1]; ?>" width="500" heigth="500">
                         <div class="row justify-content-center mt-2 px-2">
-                            <h5 class=" text-white"><?php echo $infosGames[1]; ?></h5>
+                            <h5 class=" text-white"><?php echo $infosLivros[1]; ?></h5>
                         </div>
                         <div class="row p-0 mt-2 ">
                             <ul class="d-flex flex-row justify-content-center text-white col">
@@ -80,10 +80,10 @@
                             </ul>
                         </div>
                         <div class="row p-0 mt-2 justify-content-around">
-                            <p class="text-white"><strong><?php echo $infosGames[3]; ?> ofertas a partir de</strong></p>
+                            <p class="text-white"><strong><?php echo $infosLivros[3]; ?> ofertas a partir de</strong></p>
                         </div>
                         <div class="row justify-content-center">
-                            <h2 class="text-white text-center">R$ <?php echo $infosGames[2]; ?></h2>
+                            <h2 class="text-white text-center">R$ <?php echo $infosLivros[2]; ?></h2>
                         </div>
                         <div class="row justify-content-center mt-2">
                             <button class="btn btnPadrao" title="Confira Já!">Confira Já! <i class="fas fa-thumbs-up"></i></button>

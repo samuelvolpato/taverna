@@ -34,10 +34,10 @@
         <div class="container-fluid justify-content-center">
             <ul class="collapse nav flex-md-row flex-column p-0" id="navbarNav">
                 <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="games.php">.games</a></button></li>
-                <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink">.colecionáveis</button></li>
+                <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="colecionaveis.php">.colecionaveis</a></button></li>
                 <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="moda.php">.moda</a></button></li>
-                <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink">.informática</button></li>
-                <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink">.livros e filmes</button></li>
+                <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="informatica.php">.informatica</a></button></li>
+                <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="livros.php">.livros</a></button></li>
                 <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink font-weight-bold">.todos os departamentos</button></li>        
             </ul>
         </div>
