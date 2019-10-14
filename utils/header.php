@@ -1,38 +1,41 @@
-
 <header>
-    <nav class="navbar navPrincipal navbar-dark-bg-dark border-bottom mb-3">
-        <div class="container-fluid m-0 p-0 navbar-toggle justify-content-md-between justify-content-center">
-            <div class="col-md-2 col-6 p-0  order-md-1 order-3">
-                <div class="row justify-content-start flex-nowrap p-0 m-0">                    
-                    <button class=" col-1 btn btnPadrao border-0 " data-toggle="collapse" data-target="#navbarNav" aria-expanded="false" aria-controls="navbarNav" title="Taverna.com"><i class="fas fa-bars"></i></button>
-                    <a href="index.php"><img src="assets\img\taverna_com_logo.svg" class="col-11 p-0 ml-2" title="Taverna.com"></a>
-                </div>                
-            </div>
+    <div class="container-fluid navHeader p-0">
+        <div class="container">
+
+            <nav class="navbar navbar-expand-md justify-content-between">
+                <a class="order-2 order-md-1 p-0 navbar-brand" href="index.php" title="Taverna.com"><img src="assets\img\taverna_logo_nav.png" alt=""></a>
+                
+                <button class="order-1 navbar-toggler p-0 m-0 border-0 btnUserWishCartSearchDrop" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+                
+                <button class="order-md-2 navbar-toggler p-0 btn btnPadrao d-none d-md-block border-0" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-chevron-circle-down btnUserWishCartSearchDrop"></i></button>
 
 
-            <div class="col-md-4 col-12 order-md-2 order-2 mb-2">
-                <form action="" class="input-group flex-nowrap px-3 ">
-                    <input type="text" class="form-control bg-transparent" placeholder="Pesquisa...">
-                    <button class="btn btnPadrao"><i class="fas fa-search"></i></button>
+
+                <form class="order-4 order-md-3 col-12 col-md-6 form-inline flex-nowrap p-0 m-0">
+                    <input class="form-control mr-sm-2 bg-transparent flex-fill text-white" type="search" placeholder="O que você procura?" aria-label="Search">
+                    <button class="btn my-2 my-sm-0 border-0" type="submit"><i class="fas fa-search btnUserWishCartSearchDrop"></i></button>
                 </form>
-            </div>
-            <div class="col-md-3 col-12 order-md-3 order-1">
-                <ul class="nav navbar-pills flex-nowrap p-0 justify-content-center">
-                    <li class="nav-item btn btnPadrao nav-item border-0 mx-4" data-toggle="dropdown" title="Acessar sua conta"><i class="fas fa-user-circle"></i></li>
-                    <div class="dropdown-menu bg-dark p-2 border">
-                        <a href="login.php" class="text-white efeitoLink">.entrar</a>
-                        <a href="" class="text-white efeitoLink">.entrar com <i class="fab fa-facebook"></i></a>
-                        <a href="" class="text-white efeitoLink">.entrar com <i class="fab fa-google"></i></a>
-                        <a href="cadastro.php" class="text-white efeitoLink">.cadastrar</a>
 
-                    </div>
-                    <li class="nav-item btn btnPadrao nav-item border-0 mx-4" title="Acessar wishlist"><i class="fas fa-heart"></i></li>
-                    <li class="nav-item btn btnPadrao nav-item border-0 mx-4" title="Acessar seu carrinho"><i class="fas fa-shopping-cart"></i></li>
-                </ul>
-            </div>
+                <div class="order-3 order-md-4 flex-row flex-nowrap nav nav-pills nav-fill ">
+                        <div class="dropdown">
+                            <a class="btn btnPadrao border-0" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Acessar sua conta">
+                                <i class="fas fa-user p-0 btnUserWishCartSearchDrop"></i>
+                            </a>
+                            <div class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuButton">
+                                <a class="btn btnPadrao border-0 text-white efeitoLink" href="login.php">.entrar</a>
+                                <a class="btn btnPadrao border-0 text-white efeitoLink" href="#">.entrar com <i class="fab fa-facebook"></i></a>
+                                <a class="btn btnPadrao border-0 text-white efeitoLink" href="#">.entrar com <i class="fab fa-google"></i></a>
+                                <a class="btn btnPadrao border-0 text-white efeitoLink" href="cadastro.php">.cadastrar <i class="fab fa-google"></i></a>
+                            </div>
+                        </div>
+                    <a class="btn btnPadrao border-0" href="#" title="Acessar lista"><i class="fas fa-heart p-0 btnUserWishCartSearchDrop"></i></a>
+                    <a class="btn btnPadrao border-0" href="#" title="Acessar carrinho"><i class="fas fa-shopping-cart p-0 btnUserWishCartSearchDrop"></i></a>
+                </div>
+            </nav>  
+
         </div>
-        <div class="container-fluid justify-content-center">
-            <ul class="collapse nav flex-md-row flex-column p-0" id="navbarNav">
+        <div class="collapse nav container-fluid justify-content-center" id="navbarNav">
+            <ul class="d-flex flex-md-row flex-column p-0" >
                 <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="games.php">.games</a></button></li>
                 <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="colecionaveis.php">.colecionaveis</a></button></li>
                 <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="moda.php">.moda</a></button></li>
@@ -41,5 +44,16 @@
                 <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink font-weight-bold">.todos os departamentos</button></li>        
             </ul>
         </div>
-    </nav>
+
+        <div class="collapse nav container-fluid" id="navbarNavDropdown">
+            <ul class="d-flex flex-column p-0" >
+                <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="games.php">.games</a></button></li>
+                <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="colecionaveis.php">.colecionaveis</a></button></li>
+                <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="moda.php">.moda</a></button></li>
+                <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="informatica.php">.informatica</a></button></li>
+                <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="livros.php">.livros</a></button></li>
+                <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink font-weight-bold">.todos os departamentos</button></li>        
+            </ul>
+        </div>
+    </div>
 </header>
