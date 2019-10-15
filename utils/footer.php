@@ -10,17 +10,17 @@
         </div>
         <div class="row p-2 justify-content-center">
             <div class="col-md-3 col">
-                <img src="assets\img\taverna_com_logo.svg" class="img-fluid p-2" title="Taverna.com">
+                <img src="assets\img\taverna_logo_nav.png" class="img-fluid p-2" title="Taverna.com">
 
             </div>
 
             <div class="col">
-                <div class="row">        
+                <div class="row navHeader">        
                     <ul class="col nav flex-row flex-nowrap justify-content-end">
-                        <li class="nav-item mx-2"><button class="btn btnPadrao border-0 text-white efeitoLink" title="Instagram"><i class="fab fa-instagram"></i></button></li>
-                        <li class="nav-item mx-2"><button class="btn btnPadrao border-0 text-white efeitoLink" title="Facebook"><i class="fab fa-facebook-square"></i></button></li>
-                        <li class="nav-item mx-2"><button class="btn btnPadrao border-0 text-white efeitoLink" title="Youtube"><i class="fab fa-youtube"></i></button></li>
-                        <li class="nav-item mx-2"><button class="btn btnPadrao border-0 text-white efeitoLink" title="Twitter"><i class="fab fa-twitter-square"></i></button></li>
+                        <li class="nav-item mx-2"><button class="btn btnPadrao border-0" title="Instagram"><i class="fab fa-instagram"></i></button></li>
+                        <li class="nav-item mx-2"><button class="btn btnPadrao border-0" title="Facebook"><i class="fab fa-facebook-square"></i></button></li>
+                        <li class="nav-item mx-2"><button class="btn btnPadrao border-0" title="Youtube"><i class="fab fa-youtube"></i></button></li>
+                        <li class="nav-item mx-2"><button class="btn btnPadrao border-0" title="Twitter"><i class="fab fa-twitter-square"></i></button></li>
                     </ul>
                 </div>
             </div>
