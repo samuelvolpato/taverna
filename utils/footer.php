@@ -2,10 +2,10 @@
     <div class="container-fluid justify-content-center mt-2 ">
         <div class="row">        
             <ul class="col nav flex-row justify-content-center p-0">
-                <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink">.sobre nós</button></li>
-                <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink">.dúvidas</button></li>
-                <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink">.central de atendimento</button></li>
-                <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink">.venda com a gente</button></li>
+                <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="sobrenos.php">.sobre nós</a></button></li>
+                <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="faq.php">.dúvidas</a></button></li>
+                <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="">.central de atendimento</a></button></li>
+                <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="">.venda com a gente</a></button></li>
             </ul>
         </div>
         <div class="row p-2 justify-content-center">

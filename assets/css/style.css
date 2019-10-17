@@ -220,6 +220,19 @@ footer span .fab {
     font-size: 12px;
 }
 
+/* ESTILOS DA PAG SOBRE */
+
+#titulo-faq {
+    font-size: 2em;
+    color: white;
+    padding: 30px;
+}
+
+.sobre {
+    color: white;
+    text-align: center;
+
+}
 
 /* FOOTER */
 

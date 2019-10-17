@@ -1,3 +1,4 @@
+<?php $pageTitle = "Perguntas frequentes";?>
 <?php require_once("utils/head.php") ?>
 <body>
 <?php require_once("utils/header.php") ?>

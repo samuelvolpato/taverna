@@ -1,7 +1,8 @@
-<?php require_once("inc/head.php") ?>
+<?php $pageTitle = "Contato";?>
+<?php require_once("utils/head.php"); ?>
 
 <body>
-<?php require_once("inc/header.php") ?>
+<?php require_once("utils/header.php") ?>
   <main class="main">
     <div class="div-form">
       <form action="">
@@ -18,6 +19,6 @@
       </form>
     </div>
   </main>
-<?php require_once("inc/footer.php") ?>
+<?php require_once("utils/footer.php") ?>
 </body>
 </html>
