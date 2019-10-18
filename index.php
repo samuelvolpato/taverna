@@ -57,12 +57,12 @@
 
         <!-- CARDS PROMOCIONAIS -->
 
-        <section class="container my-3 p-0">
+        <section class="destaqueContainer my-3 p-0">
 
-            <div class="row m-0 px-0 py-2" style="width: 100%">
+            <div class="row m-0 px-0 py-2 justify-content-center" style="width: 100%">
                     
                 <?php foreach ($produtosCard as $nomeProduto => $infosProduto) { ?>
-                    <div class="col-lg-3 col-sm-6 m-0 p-3">
+                    <div class=" destaqueProduto col-sm-12 col-md-2">
                         <img src="<?php echo $infosProduto[0]; ?>" class="card-img-top" alt="<?php echo $infosProduto[1]; ?>">
                         <div class="row justify-content-center mt-2 px-2">
                             <h5 class=" text-white"><?php echo $infosProduto[1]; ?></h5>
