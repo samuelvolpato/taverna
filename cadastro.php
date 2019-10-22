@@ -18,7 +18,7 @@
 
                 <div class="row p-0 m-0 justify-content-center">
                     
-                    <form class="" action="">
+                    <form class="border border-light rounded px-5 pt-3" action="">
 
                         <div class="container mb-3">
                             <button class="col btn btnPadrao" type="submit">Crie uma conta rápido e fácil com o <i class="fab fa-facebook-square"></i></button>
@@ -105,7 +105,7 @@
                             </div>                 
                         </div>
                         <div class="container mx-0 mt-4">
-                            <button class="btn btnPadrao" type="submit">Criar o seu cadastro</button>
+                            <button class="col btn btnPadrao" type="submit">Criar o seu cadastro</button>
                         </div>
         
                         <div class="container mx-0 my-4">                        

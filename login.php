@@ -16,9 +16,9 @@
                     <h1 class="text-white">Login do Cliente</h1>                  
                 </div>
 
-                <div class="row p-0 m-0 justify-content-center">
+                <div class="row justify-content-center">
                     
-                    <form class="" action="">
+                    <form class="border border-light rounded px-5 pt-3" action="">
 
                         <div class="form-group p-0 m-0">              
                             <div class="col form-group">
@@ -35,8 +35,8 @@
                             </div>
                         </div>
             
-                        <div class="container mx-0 mt-4">
-                            <button class="btn btnPadrao" type="submit">Continuar</button>
+                        <div class="container mb-3">
+                            <button class="col btn btnPadrao" type="submit">Continuar</button>
                         </div>
 
                         <div class="row text-center">
