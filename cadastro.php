@@ -33,35 +33,35 @@
                         <div class="form-group p-0 m-0">              
                             <div class="col form-group">
                                 <label for="email" class="text-white">E-mail</label>
-                                <input type="email" id="email" placeholder="Ex. joaodasilva@gmail.com" class="form-control form-control-lg bg-transparent" required>
+                                <input type="email" name="email" id="email" placeholder="Ex. joaodasilva@gmail.com" class="form-control form-control-lg bg-transparent" required>
                             </div>
                         </div>
             
                         <div class="form-group p-0 m-0">              
                             <div class="col-8 form-group">
                                 <label for="password" class="text-white">Senha</label>
-                                <input type="password" id="password" class="form-control form-control-lg bg-transparent" required>
+                                <input type="password" name="senha" id="password" class="form-control form-control-lg bg-transparent" required>
                             </div>
                         </div>
             
                         <div class="form-group p-0 m-0">              
                             <div class="col-8 form-group">
                                 <label for="cpf" class="text-white">CPF</label>
-                                <input type="text" id="cpf" class="form-control form-control-lg bg-transparent" required>
+                                <input type="text" name="cpf" id="cpf" class="form-control form-control-lg bg-transparent" required>
                             </div>
                         </div>
             
                         <div class="form-group p-0 m-0">              
                             <div class="col form-group">
                                 <label for="nome" class="text-white">Seu Nome</label>
-                                <input type="text" id="nome" class="form-control form-control-lg bg-transparent" placeholder="Ex. João" required>
+                                <input type="text" name="nome" id="nome" class="form-control form-control-lg bg-transparent" placeholder="Ex. João" required>
                             </div>
                         </div>
             
                         <div class="form-group p-0 m-0">              
                             <div class="col-9 form-group">
                                 <label for="dataNascimento" class="text-white">Data de Nascimento</label>
-                                <input type="date" id="dataNascimento" class="form-control form-control-lg bg-transparent" required>
+                                <input type="date" name="data_nascimento" id="dataNascimento" class="form-control form-control-lg bg-transparent" required>
                             </div>
                         </div>
             
@@ -71,11 +71,11 @@
                             </div>
                             <div class="container m-0" id="sexo">                    
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="masculino">
+                                    <input class="form-check-input" type="radio" name="genero" id="inlineRadio1" value="masculino">
                                     <label class="form-check-label text-white" for="inlineRadio1">Masculino</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="feminino">
+                                    <input class="form-check-input" type="radio" name="genero" id="inlineRadio2" value="feminino">
                                     <label class="form-check-label text-white" for="inlineRadio2">Feminino</label>
                                 </div>            
                             </div>
@@ -84,7 +84,7 @@
                         <div class="form-group p-0 m-0">              
                             <div class="col-9 form-group">
                                 <label for="telefone" class="text-white">Telefone</label>
-                                <input type="text" id="telefone" class="form-control form-control-lg bg-transparent" placeholder="Ex. (99) 99999-9999" required>
+                                <input type="text" name="telefone" id="telefone" class="form-control form-control-lg bg-transparent" placeholder="Ex. (99) 99999-9999" required>
                             </div>
                         </div>
             

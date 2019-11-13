@@ -19,7 +19,7 @@
 </head>
 
 <body>
-<?php require_once ('inc\header.php');?>
+<?php require_once ('utils\header.php');?>
   <main class="container">
 
     <div class="row">
@@ -369,7 +369,7 @@
 
   </main>
 
-<?php require_once("inc/footer.php");?>
+<?php require_once("utils/footer.php");?>
 </body>
 
 </html>
