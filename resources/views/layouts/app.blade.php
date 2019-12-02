@@ -64,11 +64,11 @@
                 </div>
                 <div class="collapse nav container-fluid justify-content-center" id="navbarNav">
                     <ul class="d-flex flex-md-row flex-column p-0" >
-                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="games.php">.games</a></button></li>
-                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="colecionaveis.php">.colecionaveis</a></button></li>
-                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="moda.php">.moda</a></button></li>
-                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="informatica.php">.informatica</a></button></li>
-                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="livros.php">.livros</a></button></li>
+                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="{{ route ('games') }}">.games</a></button></li>
+                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="{{ route ('colecionaveis') }}">.colecionaveis</a></button></li>
+                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="{{ route('moda') }}">.moda</a></button></li>
+                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="{{ route('informatica') }}">.informatica</a></button></li>
+                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="{{ route('livros') }}">.livros</a></button></li>
                         <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink font-weight-bold">.todos os departamentos</button></li>        
                     </ul>
                 </div>
@@ -83,6 +83,49 @@
                         <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink font-weight-bold">.todos os departamentos</button></li>        
                     </ul>
                 </div>
+            </div>
+            {{-- <div class="collapse navbar-collapse" id="navbarNavDropdown"> --}}
+            <div>   
+                @guest
+                    <ul class="navbar-nav flex-row mr-auto p-0">
+                        @if (Route::has('register'))
+                            <li class="nav-item">
+                                <a href="{{ route('register') }}" class="nav-link pr-2 text-white">{{ __('Cadastro') }}</a>
+                            </li>
+                        @endif
+                    </ul>
+                    <ul class="navbar-nav flex-row ml-auto p-0">
+                        <li class="nav-item">
+                            <a href="{{ route('login') }}" class="nav-link pr-2 text-white">{{ __('Minha Conta') }}</a>
+                        </li>
+                    </ul>
+                @else  
+                    <ul class="navbar-nav flex-row mr-auto text-white">
+                        <li class="nav-item">
+                            <a href="{{ route('index') }}" class="nav-link pr-2 text-white">Contatos</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav flex-row ml-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Olá, {{ Auth::user()->name }}
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Editar Perfil</a>
+                            <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
+                                    {{ __('Sair') }}
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+                @endguest
             </div>
         </header>
 
