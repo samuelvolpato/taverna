@@ -181,14 +181,14 @@
         <h2 class="text-white col-12">Avise um amigo e compartilhe! </h2>
     </div>
     <div class="row justify-content-center">
-        <form class="col-8">
-            <div class="form-group">
+        <form class="col-8 justify-content-center">
+            <div class="row justify-content-center formularioNewsletter">
                 <input type="email" class="form-control form-control-lg bg-transparent text-white" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite o seu E-mail">
             </div>
-            <div class="form-group">
+            <div class="row justify-content-center formularioNewsletter">
                 <input type="email" class="form-control form-control-lg bg-transparent text-white" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite o E-mail de seu amigo">
             </div>
-            <div class="row justify-content-center">
+            <div class="row justify-content-center formularioNewsletter">
                 <button type="submit" class="btn btn-lg btnPadrao ">Cadastrar!</button>
             </div>
         </form>

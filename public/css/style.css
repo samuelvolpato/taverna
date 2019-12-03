@@ -240,6 +240,11 @@ footer span .fab {
     color: gray;
 }
 
+/* NEWSLETTER */
+.formularioNewsletter {
+    padding: 10px;
+}
+
 /* FOOTER */
 
 footer ul li i {
