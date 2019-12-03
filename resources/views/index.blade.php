@@ -163,6 +163,7 @@
             
     </section>
 
+<<<<<<< HEAD
     <div class="container-fluid">
         <section class="row p-2 mt-3 ">
             <div class="col-12 d-flex barraChamada">
@@ -201,4 +202,6 @@
     </div>
 
 
+=======
+>>>>>>> 6a17095525861dd94b93abbf7142fa1344e61a23
 @endsection

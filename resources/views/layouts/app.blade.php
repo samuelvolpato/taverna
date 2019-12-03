@@ -31,7 +31,7 @@
                 <div class="container">
         
                     <nav class="navbar navbar-expand-md justify-content-between">
-                        <a class="order-2 order-md-1 p-0 navbar-brand" href="index.php" title="Taverna.com"><img src="{{ asset('img/taverna_logo_nav.png') }}" alt=""></a>
+                        <a class="order-2 order-md-1 p-0 navbar-brand" href="{{ route ('index') }}" title="Taverna.com"><img src="{{ asset('img/taverna_logo_nav.png') }}" alt=""></a>
                         
                         <button class="order-1 navbar-toggler p-0 m-0 border-0 btnUserWishCartSearchDrop" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
                         
@@ -43,7 +43,7 @@
                             <input class="form-control mr-sm-2 bg-transparent flex-fill text-white" type="search" placeholder="O que você procura?" aria-label="Search">
                             <button class="btn my-2 my-sm-0 border-0" type="submit"><i class="fas fa-search btnUserWishCartSearchDrop"></i></button>
                         </form>
-        
+                        
                         <div class="order-3 order-md-4 flex-row flex-nowrap nav nav-pills nav-fill ">
                                 <div class="dropdown">
                                     <a class="btn btnPadrao border-0" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Acessar sua conta">
@@ -51,9 +51,13 @@
                                     </a>
                                     <div class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuButton">
                                         <a class="btn btnPadrao border-0 text-white efeitoLink" href="{{ route ('login') }}">.entrar</a>
+<<<<<<< HEAD
                                         <a class="btn btnPadrao border-0 text-white efeitoLink" href="{{ route ('login') }}">.entrar com <i class="fab fa-facebook"></i></a>
                                         <a class="btn btnPadrao border-0 text-white efeitoLink" href="{{ route ('login') }}">.entrar com <i class="fab fa-google"></i></a>
                                         <a class="btn btnPadrao border-0 text-white efeitoLink" href="{{ route ('register') }}">.cadastrar <i class="fab fa-google"></i></a>
+=======
+                                        <a class="btn btnPadrao border-0 text-white efeitoLink" href="{{ route ('register') }}">.cadastrar</i></a>
+>>>>>>> 6a17095525861dd94b93abbf7142fa1344e61a23
                                     </div>
                                 </div>
                             <a class="btn btnPadrao border-0" href="#" title="Acessar lista"><i class="fas fa-heart p-0 btnUserWishCartSearchDrop"></i></a>
@@ -69,17 +73,6 @@
                         <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="{{ route('moda') }}">.moda</a></button></li>
                         <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="{{ route('informatica') }}">.informatica</a></button></li>
                         <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="{{ route('livros') }}">.livros</a></button></li>
-                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink font-weight-bold">.todos os departamentos</button></li>        
-                    </ul>
-                </div>
-        
-                <div class="collapse nav container-fluid" id="navbarNavDropdown">
-                    <ul class="d-flex flex-column p-0" >
-                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="games.php">.games</a></button></li>
-                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="colecionaveis.php">.colecionaveis</a></button></li>
-                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="moda.php">.moda</a></button></li>
-                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="informatica.php">.informatica</a></button></li>
-                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="livros.php">.livros</a></button></li>
                         <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink font-weight-bold">.todos os departamentos</button></li>        
                     </ul>
                 </div>
@@ -132,7 +125,42 @@
         <main class="py-4">
             @yield('content')
         </main>
-        
+
+        <div class="container-fluid">
+            <section class="row p-2 mt-3 ">
+                <div class="col-12 d-flex barraChamada">
+                    <h3 class="p-0 m-0"><i class="fas fa-envelope-open"></i> .fique por dentro!</h3>
+                </div>
+            </section>
+        </div>
+
+        <!-- FORMULÁRIO NEWSLETTER -->
+        <div class="container-fluid my-3">
+        <div class="row text-center my-3">
+            <h2 class="text-white col-12">Não deixe ninguém de fora de promoções e novidades imperdíveis!</h2>
+            <h2 class="text-white col-12">Avise um amigo e compartilhe! </h2>
+        </div>
+        <div class="row justify-content-center col-12">
+            <form class="">
+                <div class="form-group">
+                    <input type="email" class="form-control form-control-lg bg-transparent text-white" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite o seu E-mail">
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control form-control-lg bg-transparent text-white" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite o E-mail de seu amigo">
+                </div>
+                <div class="row justify-content-center">
+                    <button type="submit" class="btn btn-lg btnPadrao ">Cadastrar!</button>
+                </div>
+            </form>
+        </div>
+        </div>
+
+    <!-- FORMULÁRIO NEWSLETTER -->
+    <div class="col-12 bg-secondary" style="height: 300px;">
+        <h1 class="text-white text-center">banner</h1>
+    </div>
+
+    <!-- FOOTER -->
         <footer class="d-flex row  mt-3 border-top">
             <div class="container-fluid justify-content-center mt-2 ">
                 <div class="row">        
