@@ -51,6 +51,10 @@ Route::get('/games', function () {
     return view('games');
 })->name('games');
 
+Route::get('/criar', function () {
+    return view('criar');
+})->name('criar');
+
 
 
 Auth::routes();

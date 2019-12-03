@@ -3,7 +3,8 @@
 @section('content')
 <div class="container">
 
-    <form action="" method="POST">
+    <form action="" method="POST" enctype="multipart/form-data">
+        @csrf 
         <div class="form-group">
             <label for="productName" class="text-white efeitoLink">Nome do Produto</label>
             <input type="text" class="form-control" id="productName" placeholder="Informe o nome do produto">
