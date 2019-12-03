@@ -50,10 +50,10 @@
                                         <i class="fas fa-user p-0 btnUserWishCartSearchDrop"></i>
                                     </a>
                                     <div class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuButton">
-                                        <a class="btn btnPadrao border-0 text-white efeitoLink" href="login.php">.entrar</a>
-                                        <a class="btn btnPadrao border-0 text-white efeitoLink" href="#">.entrar com <i class="fab fa-facebook"></i></a>
-                                        <a class="btn btnPadrao border-0 text-white efeitoLink" href="#">.entrar com <i class="fab fa-google"></i></a>
-                                        <a class="btn btnPadrao border-0 text-white efeitoLink" href="cadastro.php">.cadastrar <i class="fab fa-google"></i></a>
+                                        <a class="btn btnPadrao border-0 text-white efeitoLink" href="{{ route ('login') }}">.entrar</a>
+                                        <a class="btn btnPadrao border-0 text-white efeitoLink" href="{{ route ('login') }}">.entrar com <i class="fab fa-facebook"></i></a>
+                                        <a class="btn btnPadrao border-0 text-white efeitoLink" href="{{ route ('login') }}">.entrar com <i class="fab fa-google"></i></a>
+                                        <a class="btn btnPadrao border-0 text-white efeitoLink" href="{{ route ('register') }}">.cadastrar <i class="fab fa-google"></i></a>
                                     </div>
                                 </div>
                             <a class="btn btnPadrao border-0" href="#" title="Acessar lista"><i class="fas fa-heart p-0 btnUserWishCartSearchDrop"></i></a>
@@ -137,8 +137,8 @@
             <div class="container-fluid justify-content-center mt-2 ">
                 <div class="row">        
                     <ul class="col nav flex-row justify-content-center p-0">
-                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="sobrenos.php">.sobre nós</a></button></li>
-                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="faq.php">.dúvidas</a></button></li>
+                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="{{ route ('sobrenos') }}">.sobre nós</a></button></li>
+                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="{{ route ('faq') }}">.dúvidas</a></button></li>
                         <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="">.central de atendimento</a></button></li>
                         <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="">.venda com a gente</a></button></li>
                     </ul>
