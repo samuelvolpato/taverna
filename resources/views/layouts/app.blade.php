@@ -52,9 +52,13 @@
                                     <div class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuButton">
                                         <a class="btn btnPadrao border-0 text-white efeitoLink" href="{{ route ('login') }}">.entrar</a>
 <<<<<<< HEAD
+<<<<<<< HEAD
                                         <a class="btn btnPadrao border-0 text-white efeitoLink" href="{{ route ('login') }}">.entrar com <i class="fab fa-facebook"></i></a>
                                         <a class="btn btnPadrao border-0 text-white efeitoLink" href="{{ route ('login') }}">.entrar com <i class="fab fa-google"></i></a>
                                         <a class="btn btnPadrao border-0 text-white efeitoLink" href="{{ route ('register') }}">.cadastrar <i class="fab fa-google"></i></a>
+=======
+                                        <a class="btn btnPadrao border-0 text-white efeitoLink" href="{{ route ('register') }}">.cadastrar</i></a>
+>>>>>>> 6a17095525861dd94b93abbf7142fa1344e61a23
 =======
                                         <a class="btn btnPadrao border-0 text-white efeitoLink" href="{{ route ('register') }}">.cadastrar</i></a>
 >>>>>>> 6a17095525861dd94b93abbf7142fa1344e61a23
