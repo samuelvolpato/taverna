@@ -132,7 +132,42 @@
         <main class="py-4">
             @yield('content')
         </main>
-        
+
+        <div class="container-fluid">
+            <section class="row p-2 mt-3 ">
+                <div class="col-12 d-flex barraChamada">
+                    <h3 class="p-0 m-0"><i class="fas fa-envelope-open"></i> .fique por dentro!</h3>
+                </div>
+            </section>
+        </div>
+
+        <!-- FORMULÁRIO NEWSLETTER -->
+        <div class="container-fluid my-3">
+        <div class="row text-center my-3">
+            <h2 class="text-white col-12">Não deixe ninguém de fora de promoções e novidades imperdíveis!</h2>
+            <h2 class="text-white col-12">Avise um amigo e compartilhe! </h2>
+        </div>
+        <div class="row justify-content-center col-12">
+            <form class="">
+                <div class="form-group">
+                    <input type="email" class="form-control form-control-lg bg-transparent text-white" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite o seu E-mail">
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control form-control-lg bg-transparent text-white" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite o E-mail de seu amigo">
+                </div>
+                <div class="row justify-content-center">
+                    <button type="submit" class="btn btn-lg btnPadrao ">Cadastrar!</button>
+                </div>
+            </form>
+        </div>
+        </div>
+
+    <!-- FORMULÁRIO NEWSLETTER -->
+    <div class="col-12 bg-secondary" style="height: 300px;">
+        <h1 class="text-white text-center">banner</h1>
+    </div>
+
+    <!-- FOOTER -->
         <footer class="d-flex row  mt-3 border-top">
             <div class="container-fluid justify-content-center mt-2 ">
                 <div class="row">        
