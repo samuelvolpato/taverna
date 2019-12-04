@@ -12,8 +12,13 @@ class Product extends Model
         "nome",
         "codigo",
         "fabricante",
+        "categoria",
         "preco",
         "descricao",
-        "detalhes"
+        "detalhes",
+        "img_path"
     ];
+    public function getAvatarImageAttribute($value) {
+        return $this->img_path == null ? asset('img/null.jpg') : asset($this->img_path);
+    }
 }
