@@ -74,6 +74,11 @@ function contadorElemento1()
                 <div class="invalid-feedback">{{ $errors->first('fabricante') }}</div>
             </div>
             <div class="form-group">
+                <label for="categoria" class="text-white efeitoLink">Categoria do Produto</label>
+                <input type="text" class="form-control{{$errors->has('categoria') ? ' is-invalid' : ''}}" value="{{ old('categoria') }}" id="categoria" placeholder="Informe a categoria do produto" name="categoria">
+                <div class="invalid-feedback">{{ $errors->first('categoria') }}</div>
+            </div>
+            <div class="form-group">
                 <label for="preco" class="text-white efeitoLink">Preço</label>
                 <input type="text" class="form-control{{$errors->has('preco') ? ' is-invalid' : ''}}" value="{{ old('preco') }}" id="preco" placeholder="Informe o preço" name="preco">
                 <div class="invalid-feedback">{{ $errors->first('preco') }}</div>

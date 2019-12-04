@@ -21,6 +21,7 @@ class ProductController extends Controller
             'preco' => 'required|numeric',
             'descricao' => 'required|max:500',
             'detalhes' => 'required|max:500',
+            'categoria' => 'required|max:100',
             'img_path' => 'nullable'
         ]);
 
