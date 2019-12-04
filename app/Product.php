@@ -22,3 +22,7 @@ class Product extends Model
         return $this->img_path == null ? asset('img/null.jpg') : asset($this->img_path);
     }
 }
+
+
+
+
