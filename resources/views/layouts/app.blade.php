@@ -43,7 +43,7 @@
                             <input class="form-control mr-sm-2 bg-transparent flex-fill text-white" type="search" placeholder="O que você procura?" aria-label="Search">
                             <button class="btn my-2 my-sm-0 border-0" type="submit"><i class="fas fa-search btnUserWishCartSearchDrop"></i></button>
                         </form>
-        
+                        
                         <div class="order-3 order-md-4 flex-row flex-nowrap nav nav-pills nav-fill ">
                                 <div class="dropdown">
                                     <a class="btn btnPadrao border-0" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Acessar sua conta">
@@ -69,17 +69,6 @@
                         <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="{{ route('moda') }}">.moda</a></button></li>
                         <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="{{ route('informatica') }}">.informatica</a></button></li>
                         <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="{{ route('livros') }}">.livros</a></button></li>
-                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink font-weight-bold">.todos os departamentos</button></li>        
-                    </ul>
-                </div>
-        
-                <div class="collapse nav container-fluid" id="navbarNavDropdown">
-                    <ul class="d-flex flex-column p-0" >
-                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="games.php">.games</a></button></li>
-                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="colecionaveis.php">.colecionaveis</a></button></li>
-                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="moda.php">.moda</a></button></li>
-                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="informatica.php">.informatica</a></button></li>
-                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="livros.php">.livros</a></button></li>
                         <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink font-weight-bold">.todos os departamentos</button></li>        
                     </ul>
                 </div>
@@ -132,13 +121,48 @@
         <main class="py-4">
             @yield('content')
         </main>
-        
+
+        <div class="container-fluid">
+            <section class="row p-2 mt-3 ">
+                <div class="col-12 d-flex barraChamada">
+                    <h3 class="p-0 m-0"><i class="fas fa-envelope-open"></i> .fique por dentro!</h3>
+                </div>
+            </section>
+        </div>
+
+        <!-- FORMULÁRIO NEWSLETTER -->
+        <div class="container-fluid my-3">
+        <div class="row text-center my-3">
+            <h2 class="text-white col-12">Não deixe ninguém de fora de promoções e novidades imperdíveis!</h2>
+            <h2 class="text-white col-12">Avise um amigo e compartilhe! </h2>
+        </div>
+        <div class="row justify-content-center col-12">
+            <form class="">
+                <div class="form-group">
+                    <input type="email" class="form-control form-control-lg bg-transparent text-white" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite o seu E-mail">
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control form-control-lg bg-transparent text-white" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite o E-mail de seu amigo">
+                </div>
+                <div class="row justify-content-center">
+                    <button type="submit" class="btn btn-lg btnPadrao ">Cadastrar!</button>
+                </div>
+            </form>
+        </div>
+        </div>
+
+    <!-- FORMULÁRIO NEWSLETTER -->
+    <div class="col-12 bg-secondary" style="height: 300px;">
+        <h1 class="text-white text-center">banner</h1>
+    </div>
+
+    <!-- FOOTER -->
         <footer class="d-flex row  mt-3 border-top">
             <div class="container-fluid justify-content-center mt-2 ">
                 <div class="row">        
                     <ul class="col nav flex-row justify-content-center p-0">
-                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="sobrenos.php">.sobre nós</a></button></li>
-                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="faq.php">.dúvidas</a></button></li>
+                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="{{ route ('sobrenos') }}">.sobre nós</a></button></li>
+                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="{{ route ('faq') }}">.dúvidas</a></button></li>
                         <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="">.central de atendimento</a></button></li>
                         <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="">.venda com a gente</a></button></li>
                     </ul>
