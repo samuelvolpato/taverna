@@ -14,6 +14,7 @@ class Product extends Model
         "fabricante",
         "preco",
         "descricao",
-        "detalhes"
+        "detalhes",
+        "categoria"
     ];
 }

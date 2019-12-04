@@ -70,7 +70,7 @@ function contadorElemento1()
             </div>
             <div class="form-group">
                 <label for="fabricante" class="text-white efeitoLink">Fabricante do Produto</label>
-                <input type="text" class="form-control{{$errors->has('nome') ? ' is-invalid' : ''}}" value="{{ old('fabricante') }}" id="fabricante" placeholder="Informe o fabricante do produto" name="fabricante">
+                <input type="text" class="form-control{{$errors->has('fabricante') ? ' is-invalid' : ''}}" value="{{ old('fabricante') }}" id="fabricante" placeholder="Informe o fabricante do produto" name="fabricante">
                 <div class="invalid-feedback">{{ $errors->first('fabricante') }}</div>
             </div>
             <div class="form-group">
