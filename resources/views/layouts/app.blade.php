@@ -31,7 +31,7 @@
                 <div class="container">
         
                     <nav class="navbar navbar-expand-md justify-content-between">
-                        <a class="order-2 order-md-1 p-0 navbar-brand" href="index.php" title="Taverna.com"><img src="{{ asset('img/taverna_logo_nav.png') }}" alt=""></a>
+                        <a class="order-2 order-md-1 p-0 navbar-brand" href="{{ route('index') }}" title="Taverna.com"><img src="{{ asset('img/taverna_logo_nav.png') }}" alt=""></a>
                         
                         <button class="order-1 navbar-toggler p-0 m-0 border-0 btnUserWishCartSearchDrop" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
                         
@@ -50,14 +50,14 @@
                                         <i class="fas fa-user p-0 btnUserWishCartSearchDrop"></i>
                                     </a>
                                     <div class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuButton">
-                                        <a class="btn btnPadrao border-0 text-white efeitoLink" href="login.php">.entrar</a>
-                                        <a class="btn btnPadrao border-0 text-white efeitoLink" href="#">.entrar com <i class="fab fa-facebook"></i></a>
-                                        <a class="btn btnPadrao border-0 text-white efeitoLink" href="#">.entrar com <i class="fab fa-google"></i></a>
-                                        <a class="btn btnPadrao border-0 text-white efeitoLink" href="cadastro.php">.cadastrar <i class="fab fa-google"></i></a>
+                                        <a class="btn btnPadrao border-0 text-white efeitoLink" href="{{ route('login') }}">.entrar</a>
+                                        {{-- <a class="btn btnPadrao border-0 text-white efeitoLink" href="#">.entrar com <i class="fab fa-facebook"></i></a>
+                                        <a class="btn btnPadrao border-0 text-white efeitoLink" href="#">.entrar com <i class="fab fa-google"></i></a> --}}
+                                    <a class="btn btnPadrao border-0 text-white efeitoLink" href="{{ route('register')}}">.cadastrar</i></a>
                                     </div>
                                 </div>
-                            <a class="btn btnPadrao border-0" href="#" title="Acessar lista"><i class="fas fa-heart p-0 btnUserWishCartSearchDrop"></i></a>
-                            <a class="btn btnPadrao border-0" href="#" title="Acessar carrinho"><i class="fas fa-shopping-cart p-0 btnUserWishCartSearchDrop"></i></a>
+                            <a class="btn btnPadrao border-0" href="{{ route('login') }}" title="Acessar lista"><i class="fas fa-heart p-0 btnUserWishCartSearchDrop"></i></a>
+                            <a class="btn btnPadrao border-0" href="{{ route('login') }}" title="Acessar carrinho"><i class="fas fa-shopping-cart p-0 btnUserWishCartSearchDrop"></i></a>
                         </div>
                     </nav>  
         
@@ -85,7 +85,7 @@
                 </div>
             </div>
             {{-- <div class="collapse navbar-collapse" id="navbarNavDropdown"> --}}
-            <div>   
+            {{-- <div>   
                 @guest
                     <ul class="navbar-nav flex-row mr-auto p-0">
                         @if (Route::has('register'))
@@ -126,7 +126,7 @@
                         </li>
                     </ul>
                 @endguest
-            </div>
+            </div> --}}
         </header>
 
         <main class="py-4">

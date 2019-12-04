@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-})->name('index');
+Route::get('/', function () { return view('index');})->name('index');
 
 Route::get('/colecionaveis', function () {
     return view('colecionaveis');
@@ -50,6 +48,11 @@ Route::get('/informatica', function () {
 Route::get('/games', function () {
     return view('games');
 })->name('games');
+
+Route::get('/produtos/criar', 'ProductController@create');
+Route::post('/produtos/criar', 'ProductController@store')->name('cadastro_produto');
+
+
 
 
 
