@@ -50,18 +50,8 @@
                                         <i class="fas fa-user p-0 btnUserWishCartSearchDrop"></i>
                                     </a>
                                     <div class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuButton">
-                                        <a class="btn btnPadrao border-0 text-white efeitoLink" href="{{ route ('login') }}">.entrar</a>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                                        <a class="btn btnPadrao border-0 text-white efeitoLink" href="{{ route ('login') }}">.entrar com <i class="fab fa-facebook"></i></a>
-                                        <a class="btn btnPadrao border-0 text-white efeitoLink" href="{{ route ('login') }}">.entrar com <i class="fab fa-google"></i></a>
-                                        <a class="btn btnPadrao border-0 text-white efeitoLink" href="{{ route ('register') }}">.cadastrar <i class="fab fa-google"></i></a>
-=======
+                                        <a class="btn btnPadrao border-0 text-white efeitoLink" href="{{ route ('login') }}">.entrar</a>    
                                         <a class="btn btnPadrao border-0 text-white efeitoLink" href="{{ route ('register') }}">.cadastrar</i></a>
->>>>>>> 6a17095525861dd94b93abbf7142fa1344e61a23
-=======
-                                        <a class="btn btnPadrao border-0 text-white efeitoLink" href="{{ route ('register') }}">.cadastrar</i></a>
->>>>>>> 6a17095525861dd94b93abbf7142fa1344e61a23
                                     </div>
                                 </div>
                             <a class="btn btnPadrao border-0" href="#" title="Acessar lista"><i class="fas fa-heart p-0 btnUserWishCartSearchDrop"></i></a>
