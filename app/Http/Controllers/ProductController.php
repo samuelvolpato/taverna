@@ -16,11 +16,11 @@ class ProductController extends Controller
     {
         $request->validate([
             'nome' => 'required|max:50',
-            'codigo' => 'required|max:10',
+            'codigo' => 'required|numeric',
             'fabricante' => 'required|max:50',
-            'preco' => 'required|max:80',
-            'descricao' => 'required|max:100',
-            'detalhes' => 'required|max:100',
+            'preco' => 'required|numeric',
+            'descricao' => 'required|max:500',
+            'detalhes' => 'required|max:500',
             'img_path' => 'nullable'
         ]);
 
