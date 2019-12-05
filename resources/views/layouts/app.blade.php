@@ -49,12 +49,22 @@
                                     <a class="btn btnPadrao border-0" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Acessar sua conta">
                                         <i class="fas fa-user p-0 btnUserWishCartSearchDrop"></i>
                                     </a>
+                                    @guest
                                     <div class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuButton">
-                                        <a class="btn btnPadrao border-0 text-white efeitoLink" href="{{ route('login') }}">.entrar</a>
-                                        {{-- <a class="btn btnPadrao border-0 text-white efeitoLink" href="#">.entrar com <i class="fab fa-facebook"></i></a>
-                                        <a class="btn btnPadrao border-0 text-white efeitoLink" href="#">.entrar com <i class="fab fa-google"></i></a> --}}
-                                    <a class="btn btnPadrao border-0 text-white efeitoLink" href="{{ route('register')}}">.cadastrar</i></a>
+                                        @if(Route::has('register'))
+                                        <a class="btn btnPadrao border-0 text-white efeitoLink" href="{{ route('register')}}">{{ __('.cadastrar') }}</a>
+                                        @endif
+                                        <a class="btn btnPadrao border-0 text-white efeitoLink" href="{{ route('login') }}">{{ __('.entrar') }}</a>
                                     </div>
+                                    @else
+                                        <div class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuButton">
+                                            <a class="btn btnPadrao border-0 text-white efeitoLink" href="{{ route('register')}}">{{ __('.minha conta') }}</a>
+                                            <a onclick="event.preventDefault();
+                                            document.getElementById('logout-form').submit();" class="btn btnPadrao border-0 text-white efeitoLink" href="{{ route('logout') }}">{{ __('.sair') }}</a>
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                @csrf
+                                            </form>
+                                        </div>
                                 </div>
                             <a class="btn btnPadrao border-0" href="{{ route('login') }}" title="Acessar lista"><i class="fas fa-heart p-0 btnUserWishCartSearchDrop"></i></a>
                             <a class="btn btnPadrao border-0" href="{{ route('login') }}" title="Acessar carrinho"><i class="fas fa-shopping-cart p-0 btnUserWishCartSearchDrop"></i></a>
@@ -73,49 +83,7 @@
                     </ul>
                 </div>
             </div>
-            {{-- <div class="collapse navbar-collapse" id="navbarNavDropdown"> --}}
-            {{-- <div>   
-                @guest
-                    <ul class="navbar-nav flex-row mr-auto p-0">
-                        @if (Route::has('register'))
-                            <li class="nav-item">
-                                <a href="{{ route('register') }}" class="nav-link pr-2 text-white">{{ __('Cadastro') }}</a>
-                            </li>
-                        @endif
-                    </ul>
-                    <ul class="navbar-nav flex-row ml-auto p-0">
-                        <li class="nav-item">
-                            <a href="{{ route('login') }}" class="nav-link pr-2 text-white">{{ __('Minha Conta') }}</a>
-                        </li>
-                    </ul>
-                @else  
-                    <ul class="navbar-nav flex-row mr-auto text-white">
-                        <li class="nav-item">
-                            <a href="{{ route('index') }}" class="nav-link pr-2 text-white">Contatos</a>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav flex-row ml-auto">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Olá, {{ Auth::user()->name }}
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Editar Perfil</a>
-                            <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                    onclick="event.preventDefault();
-                                        document.getElementById('logout-form').submit();">
-                                    {{ __('Sair') }}
-                                </a>
-
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                    @csrf
-                                </form>
-                            </div>
-                        </li>
-                    </ul>
-                @endguest
-            </div> --}}
+            @endguest
         </header>
 
         <main class="py-4">

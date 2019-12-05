@@ -54,6 +54,7 @@ function contadorElemento1()
         </div>
     </div>
 @endif
+
 <div class="row justify-content-center">
 
     <form action="{{ route('cadastro_produto') }}" method="POST" enctype="multipart/form-data">
