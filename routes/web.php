@@ -49,9 +49,11 @@ Route::get('/games', function () {
     return view('games');
 })->name('games');
 
-Route::get('/produtos/criar', 'ProductController@create');
+Route::get('/produtos/criar', 'ProductController@create')->name('products-create');
 Route::post('/produtos/criar', 'ProductController@store')->name('cadastro_produto');
 
+Route::get('/produtos/show','ProductController@show')->name('products-show');
+//show 
 
 
 

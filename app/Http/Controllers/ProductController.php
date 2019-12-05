@@ -52,5 +52,12 @@ class ProductController extends Controller
         $mensagem = "Cadastro de " . $request->input('nome')." criado com sucesso!";
         return view ('produtos.criar')->with('retorno', $mensagem);
     }
+
+    public function show(){
+
+        $products = Product::all();
+        return view ('products-show')->with('products',$products);
+    }
+    
 }
 
