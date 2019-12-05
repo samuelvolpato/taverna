@@ -31,9 +31,9 @@ class ProductController extends Controller
             $caminhoRelativo = null;
         } else {
             $imagem->storePublicly('img');
-            $caminhoAbsoluto = public_path()."/storage/img";
+            $caminhoAbsoluto = public_path()."/storage/app/img";
             $nomeArquivo = $imagem->getClientOriginalName();
-            $caminhoRelativo = "storage/img/$nomeArquivo";
+            $caminhoRelativo = "storage/app/img/$nomeArquivo";
             $imagem->move($caminhoAbsoluto, $nomeArquivo);
         }
 
