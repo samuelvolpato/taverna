@@ -32,12 +32,12 @@ class ProductController extends Controller
         } else {
             $imagem->storePublicly('img');
             $caminhoAbsoluto = public_path()."/storage/app/img";
-            $nomeArquivo = $imagem->getClientOriginalName();
+            $nomeArquivo = $request->file('img_path')->getClientOriginalName();
             $caminhoRelativo = "storage/app/img/$nomeArquivo";
             $imagem->move($caminhoAbsoluto, $nomeArquivo);
         }
 
-        $contact = Product::create([
+        $product = Product::create([
             'nome' => $request->input('nome'),
             'codigo' => $request->input('codigo'),
             'fabricante' => $request->input('fabricante'),
