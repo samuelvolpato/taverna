@@ -56,7 +56,7 @@ class ProductController extends Controller
     public function show(){
 
         $products = Product::all();
-        return view ('products-show')->with('products',$products);
+        return view ('show')->with('products',$products);
     }
     
 }
