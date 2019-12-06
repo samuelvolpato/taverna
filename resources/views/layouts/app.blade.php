@@ -66,6 +66,7 @@
                                             </form>
                                         </div>
                                 </div>
+                                @endguest
                             <a class="btn btnPadrao border-0" href="{{ route('login') }}" title="Acessar lista"><i class="fas fa-heart p-0 btnUserWishCartSearchDrop"></i></a>
                             <a class="btn btnPadrao border-0" href="{{ route('login') }}" title="Acessar carrinho"><i class="fas fa-shopping-cart p-0 btnUserWishCartSearchDrop"></i></a>
                         </div>
@@ -82,8 +83,18 @@
                         <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink font-weight-bold">.todos os departamentos</button></li>        
                     </ul>
                 </div>
+
+                <div class="collapse nav container" id="navbarNavDropdown">
+                        <ul class="d-flex flex-column p-0" >
+                            <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="games.php">.games</a></button></li>
+                            <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="colecionaveis.php">.colecionaveis</a></button></li>
+                            <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="moda.php">.moda</a></button></li>
+                            <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="informatica.php">.informatica</a></button></li>
+                            <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="livros.php">.livros</a></button></li>
+                            <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink font-weight-bold">.todos os departamentos</button></li>        
+                        </ul>
+                    </div>
             </div>
-            @endguest
         </header>
 
         <main class="py-4">
