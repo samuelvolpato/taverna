@@ -54,7 +54,8 @@ Route::post('/produtos/criar', 'ProductController@store')->name('cadastro_produt
 
 Route::get('/produtos/show','ProductController@show')->name('products-show');
 //show 
-
+Route::delete('/produtos/delete/{id}','ProductController@delete')->name('products-delete');
+//delete 
 
 
 

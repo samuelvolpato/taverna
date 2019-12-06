@@ -58,6 +58,12 @@ class ProductController extends Controller
         $products = Product::all();
         return view ('show')->with('products',$products);
     }
-    
+
+    public function delete(Request $request,$id){
+
+        $products = Product::find($id);
+        $products->delete();
+        return view('show');
+    }
 }
 

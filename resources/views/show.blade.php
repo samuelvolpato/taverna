@@ -46,37 +46,37 @@
                                                     </a>
                                                 </td>
                                                 <td>
-                                                    <a href="/contacts/edit/{{$product->id}}">
+                                                    <a href="/products/edit/{{$product->id}}">
                                                         <i class="fas fa-edit"></i>
                                                     </a>
                                                 </td>
                                                 <td>
                                                     <a href="#" data-toggle="modal" data-target="#modal{{ $product->id }}">
-                                                        <i class="fas fa-trash"></i>
+                                                        <i class="fas fa-trash-alt"></i>
                                                     </a>
-                                                    {{-- <div class="modal fade" id="modal{{ $product->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal fade" id="modal{{ $product->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                         <div class="modal-dialog" role="document">
                                                             <div class="modal-content">
                                                                 <div class="modal-header">
-                                                                    <h5 class="modal-title">Deseja excluir o produto {{ $contact->titulo }} ?</h5>
+                                                                    <h5 class="modal-title">Deseja excluir o produto {{ $product->nome }} ?</h5>
                                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                                     <span aria-hidden="true">&times;</span>
                                                                     </button>
                                                                 </div>
                                                                 <div class="modal-body">
-                                                                    <p>Contato: {{ $contact->first_name . " " . $contact->last_name }}</p>
+                                                                    <p>Contato: {{ $product->nome . " " . $product->categoria }}</p>
                                                                 </div>
                                                                 <div class="modal-footer">
                                                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                                                    <form action="/contacts/remove/{{ $contact->id }}" method="POST">
+                                                                     <form action="/produtos/delete/{{ $product->id}}" method="POST">
                                                                         @csrf
                                                                         {{ method_field('DELETE') }}
-                                                                        <button id="delete-contact" type="submit" class="btn btn-danger">Excluir</a>
+                                                                        <button id="delete-product" type="submit" class="btn btn-danger">Excluir</a>
                                                                     </form>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div> --}}
+                                                    </div>
                                                 </td>
                                             </tr>
                                         @endforeach
