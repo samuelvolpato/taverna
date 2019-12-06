@@ -56,14 +56,15 @@ class ProductController extends Controller
     public function show(){
 
         $products = Product::all();
-        return view ('show')->with('products',$products);
+        return view ('produtos.show')->with('products',$products);
     }
 
-    public function delete(Request $request,$id){
+    public function delete($id){
 
         $products = Product::find($id);
         $products->delete();
-        return view('show');
+        $mensagem = "Produto excluído com sucesso!";
+        return view ('/produtos/criar')->with('retorno', $mensagem);
     }
 }
 
