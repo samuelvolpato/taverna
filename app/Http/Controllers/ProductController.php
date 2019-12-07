@@ -31,9 +31,9 @@ class ProductController extends Controller
             $caminhoRelativo = null;
         } else {
             $imagem->storePublicly('img');
-            $caminhoAbsoluto = public_path()."/storage/app/img";
-            $nomeArquivo = $request->file('img_path')->getClientOriginalName();
-            $caminhoRelativo = "storage/app/img/$nomeArquivo";
+            $caminhoAbsoluto = public_path()."/storage/img";
+            $nomeArquivo = $imagem->getClientOriginalName();
+            $caminhoRelativo = "storage/img/$nomeArquivo";
             $imagem->move($caminhoAbsoluto, $nomeArquivo);
         }
 
@@ -66,5 +66,44 @@ class ProductController extends Controller
         $mensagem = "Produto excluído com sucesso!";
         return view ('/produtos/criar')->with('retorno', $mensagem);
     }
+
+    public function edit($id){
+
+      $product = Product::find($id);
+      return view('/produtos/update')->with('product',$product);
+
+    }
+    public function update(Request $request,$id){
+        $product = Product::find($id);
+        $request->all();
+
+        $imagem = $request->file('img_pauth');
+
+        if (empty($imagem)) {
+            $caminhoRelativo = $product->img_pauth;
+        } else {
+            $imagem->storePublicly('img');
+            $caminhoAbsoluto = public_path()."/storage/img";
+            $nomeimagem = $imagem->getClientOriginalName();
+            $caminhoRelativo = "storage/img/$nomeimagem";  
+            $imagem->move($caminhoAbsoluto, $nomeimagem);
+        }
+
+        $product = Product::create([
+            'nome' => $request->input('nome'),
+            'codigo' => $request->input('codigo'),
+            'fabricante' => $request->input('fabricante'),
+            'preco' => $request->input('preco'),
+            'descricao' => $request->input('descricao'),
+            'detalhes' => $request->input('detalhes'),
+            'categoria' => $request->input('categoria'),
+            'img_path' => $caminhoRelativo
+        ]);
+
+        // $product = Product::create($request->all());
+        $mensagem = "Update de " . $request->input('nome')." executado com sucesso!";
+        return view ('produtos.show')->with('retorno', $mensagem);
+    }    
+
 }
 
