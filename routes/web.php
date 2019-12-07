@@ -51,11 +51,14 @@ Route::get('/games', function () {
 
 Route::get('/produtos/criar', 'ProductController@create')->name('products-create');
 Route::post('/produtos/criar', 'ProductController@store')->name('cadastro_produto');
-
-Route::get('/produtos/show','ProductController@show')->name('products-show');
 //show 
-Route::delete('/produtos/delete/{id}','ProductController@delete')->name('products-delete');
+Route::get('/produtos/show','ProductController@show')->name('products-show');
 //delete 
+Route::delete('/produtos/delete/{id}','ProductController@delete')->name('products-delete');
+//update
+Route::get('/produtos/update/{id}','ProductController@edit');
+Route::put('/produtos/update/{id}','ProductController@update');
+
 
 
 

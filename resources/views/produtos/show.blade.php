@@ -46,7 +46,7 @@
                                                     </a>
                                                 </td>
                                                 <td>
-                                                    <a href="/products/edit/{{$product->id}}">
+                                                    <a href="/produtos/update/{{$product->id}}">
                                                         <i class="fas fa-edit"></i>
                                                     </a>
                                                 </td>
