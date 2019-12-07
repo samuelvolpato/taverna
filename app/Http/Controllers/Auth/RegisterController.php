@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
 use App\User;
-use Illuminate\Foundation\Auth\RegistersUsers;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
@@ -53,11 +54,11 @@ class RegisterController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8'],
             'address' => ['required', 'string', 'min:8'],
-            'telephone' => ['required', 'numeric', 'min:8'],
-            'cpf' => ['required', 'numeric', 'min:8'],
-            'birthday' => ['required', 'numeric', 'min:8'],
+            'telephone' => ['required', 'string', 'min:8'],
+            'cpf' => ['required', 'string', 'min:8'],
+            'birthday' => ['required', 'string', 'min:8'],
             'gender' => ['required', 'string', 'min:8'],
-            'access_level' => ['nullable']
+            'cep' => ['required', 'string']
         ]);
     }
 
@@ -78,7 +79,7 @@ class RegisterController extends Controller
             'cpf' => $data['cpf'],
             'birthday' => $data['birthday'],
             'gender' => $data['gender'],
-            'access_level' => $data['access_level']
+            'cep' => $data['cep']
         ]);
     }
 }

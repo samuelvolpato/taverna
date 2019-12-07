@@ -13,6 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
+                    
 
                     Seja bem vindo e boas compras!
                 </div>
@@ -20,4 +21,5 @@
         </div>
     </div>
 </div>
+
 @endsection

@@ -55,6 +55,7 @@ function contadorElemento1()
     </div>
 @endif
 
+
 <div class="row justify-content-center">
 
     <form action="{{ route('cadastro_produto') }}" method="POST" enctype="multipart/form-data">
@@ -102,8 +103,13 @@ function contadorElemento1()
             </div>
             <button class="btn btnPadrao" id="cadastrar">Cadastrar Produto</button>
         </form>
-
-</div>
+        
+    </div>
+            <div class="row justify-content-center mt-5">
+                
+                        <a class="btn btnPadrao col-5" id="cadastrar" href="{{ route('products-show')}}">Visualizar Produtos</a>
+               
+            </div>
 </div>
 
 @endsection

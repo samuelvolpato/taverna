@@ -64,7 +64,7 @@ class ProductController extends Controller
         $products = Product::find($id);
         $products->delete();
         $mensagem = "Produto excluído com sucesso!";
-        return view ('/produtos/criar')->with('retorno', $mensagem);
+        return view ('produtos.criar')->with('retorno', $mensagem);
     }
 
     public function edit($id){
