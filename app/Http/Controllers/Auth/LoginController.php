@@ -26,6 +26,16 @@ class LoginController extends Controller
      * @var string
      */
     protected $redirectTo = '/home';
+    
+    
+    public function redirectAdmin($emailAdmin)
+    {
+        $emailAdmin = DB::table('users')->where('email', 'admin@taverna.com')->get();
+        
+        if(isset($emailAdmin)){
+           $redirectTo = '/produtos/criar';
+        }
+    }
 
     /**
      * Create a new controller instance.
@@ -36,4 +46,6 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+    
 }

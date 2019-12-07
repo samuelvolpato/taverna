@@ -28,7 +28,7 @@ class User extends Authenticatable
         "cpf",
         "birthday",
         "gender",
-        "access_level"
+        "cep"
     ];
 
     /**

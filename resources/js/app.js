@@ -5,6 +5,7 @@
  */
 
 require('./bootstrap');
+require('./jquery.mask');
 
 window.Vue = require('vue');
 
