@@ -9,7 +9,7 @@
          @csrf
          {{ method_field('PUT') }} 
          <div class="form-group">
-           <img src="{{ $product->img_pauth}}" class="rounded-circle" width="200" height="200" alt="Imagem">
+           <img src="{{ url($product->img_path)}}" class="rounded-circle" width="200" height="200" alt="Imagem">
          </div>
         <div class="form-group">
             <label for="nome">Nome</label>

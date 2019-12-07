@@ -35,7 +35,7 @@
                                     <tbody>
                                         @foreach ($products as $product)
                                             <tr>
-                                                <td><img src="{{ $product->img_path }}" class="rounded-circle" width="35" height="35"></td>
+                                                <td><img src="{{ url($product->img_path) }}" class="rounded-circle" width="35" height="35"></td>
                                                 <td>{{ $product->nome }}</a></td>
                                                 <td>{{ $product->categoria }}</a></td>
                                                 <td class="d-none d-md-table-cell">{{ $product->codigo }}</a></td>
