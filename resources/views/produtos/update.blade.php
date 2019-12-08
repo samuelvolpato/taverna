@@ -27,9 +27,29 @@
             <div class="invalid-feedback">{{ $errors->first('fabricante') }}</div>
         </div>
         <div class="form-group">
-            <label for="preco">Preço</label>
+            <label for="img_path">Preço</label>
             <input type="text" class="form-control{{$errors->has('preco') ? ' is-invalid':''}}" value="{{ $product->preco}}" id="preco" name="preco">
             <div class="invalid-feedback">{{ $errors->first('preco') }}</div>
+        </div>
+        <div class="form-group">
+            <label for="descricao">Descrição</label>
+            <input type="text" class="form-control{{$errors->has('descricao') ? ' is-invalid':''}}" value="{{ $product->descricao}}" id="descricao" name="descricao">
+            <div class="invalid-feedback">{{ $errors->first('descricao') }}</div>
+        </div>
+        <div class="form-group">
+            <label for="detalhes">Detalhes</label>
+            <input type="text" class="form-control{{$errors->has('detalhes') ? ' is-invalid':''}}" value="{{ $product->detalhes}}" id="detalhes" name="detalhes">
+            <div class="invalid-feedback">{{ $errors->first('detalhes') }}</div>
+        </div>
+        <div class="form-group">
+            <label for="categoria">Categoria</label>
+            <input type="text" class="form-control{{$errors->has('categoria') ? ' is-invalid':''}}" value="{{ $product->categoria}}" id="categoria" name="categoria">
+            <div class="invalid-feedback">{{ $errors->first('categoria') }}</div>
+        </div>
+        <div class="form-group">
+            <label for="img_path">Imagem</label>
+            <input type="file" class="form-control{{$errors->has('img_path') ? ' is-invalid':''}}" value="{{ $product->img_path}}" id="img_path" name="img_path">
+            <div class="invalid-feedback">{{ $errors->first('img_path') }}</div>
         </div>
         <div class="form-group">
             <button type="submit" class="btn btn-danger">

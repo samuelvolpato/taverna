@@ -97,20 +97,30 @@ class ProductController extends Controller
             $imagem->move($caminhoAbsoluto, $nomeimagem);
         }
 
-        $product = Product::create([
-            'nome' => $request->input('nome'),
-            'codigo' => $request->input('codigo'),
-            'fabricante' => $request->input('fabricante'),
-            'preco' => $request->input('preco'),
-            'descricao' => $request->input('descricao'),
-            'detalhes' => $request->input('detalhes'),
-            'categoria' => $request->input('categoria'),
-            'img_path' => $caminhoRelativo
-        ]);
+        // $product = Product::create([
+        //     'nome' => $request->input('nome'),
+        //     'codigo' => $request->input('codigo'),
+        //     'fabricante' => $request->input('fabricante'),
+        //     'preco' => $request->input('preco'),
+        //     'descricao' => $request->input('descricao'),
+        //     'detalhes' => $request->input('detalhes'),
+        //     'categoria' => $request->input('categoria'),
+        //     'img_path' => $caminhoRelativo
+        // ]);
 
+        $product->nome = $request->input('nome');
+        $product->codigo = $request->input('codigo');      
+        $product->fabricante = $request->input('fabricante');
+        $product->preco = $request->input('preco');
+        $product->descricao = $request->input('descricao');
+        $product->detalhes = $request->input('detalhes');
+        $product->categoria = $request->input('categoria');
+        $product->img_path = $caminhoRelativo;
+
+        $product->save();
         // $product = Product::create($request->all());
         $mensagem = "Update de " . $request->input('nome')." executado com sucesso!";
-        return view ('produtos.show')->with('retorno', $mensagem);
+        return view ('produtos.criar')->with('retorno', $mensagem);
     }    
 
 }
