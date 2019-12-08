@@ -48,7 +48,7 @@
         </div>
         <div class="form-group">
             <label for="img_path">Imagem</label>
-            <input type="file" class="form-control{{$errors->has('img_path') ? ' is-invalid':''}}" value="{{ $product->img_path}}" id="img_path" name="img_path">
+            <input type="file" class="form-control{{$errors->has('img_path') ? ' is-invalid':''}}" value="{{ $product->img_path}}" id="img_path" name="img_path" required>
             <div class="invalid-feedback">{{ $errors->first('img_path') }}</div>
         </div>
         <div class="form-group">
