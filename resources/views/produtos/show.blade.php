@@ -43,7 +43,7 @@
                                                 <td class="d-none d-md-table-cell text-white" title="Código do produto">{{ $product->codigo }}</a></td>
                                                 <td class="d-none d-md-table-cell text-white" title="Preço do produto">{{ $product->preco }}</a></td>
                                                 <td>
-                                                    <a href="/products/show/{{$product->id}}">
+                                                    <a href="/pagina-produto/{{$product->id}}">
                                                         <i class="fas fa-external-link-square-alt" title="Acessar produto"></i></i>
                                                     </a>
                                                 </td>
