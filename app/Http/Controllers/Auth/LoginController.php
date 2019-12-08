@@ -25,17 +25,8 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
     
-    
-    public function redirectAdmin($emailAdmin)
-    {
-        $emailAdmin = DB::table('users')->where('email', 'admin@taverna.com')->get();
-        
-        if(isset($emailAdmin)){
-           $redirectTo = '/produtos/criar';
-        }
-    }
 
     /**
      * Create a new controller instance.

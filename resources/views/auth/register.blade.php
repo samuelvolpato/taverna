@@ -1,12 +1,12 @@
 @extends('layouts.app')
-
+@section('pagina_titulo', 'Cadastro')
 
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header"> {{ isset($url) ? ucwords($url) : ""}} {{ __('Register') }}</div>
+                <div class="card-header"> {{ __('Cadastro') }}</div>
 
                 <div class="card-body">
                     @isset($url)
