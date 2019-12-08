@@ -16,6 +16,7 @@ class Product extends Model
         "preco",
         "descricao",
         "detalhes",
+        "ativo",
         "img_path"
     ];
     public function getAvatarImageAttribute($value) {

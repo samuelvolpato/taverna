@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class NivelAcessoTabelaUsers extends Migration
+class AddCepColumnToUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class NivelAcessoTabelaUsers extends Migration
      */
     public function up()
     {
-        Schema::table('users', function(Blueprint $table){
-            $table->string('access_level');
+        Schema::table('users', function (Blueprint $table) {
+            $table->string('cep');
         });
     }
 
@@ -25,6 +25,8 @@ class NivelAcessoTabelaUsers extends Migration
      */
     public function down()
     {
-        Schemma::dropIfExists('users');
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropIfexists('users');
+        });
     }
 }

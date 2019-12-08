@@ -4,25 +4,36 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Product;
+
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
+    public function redirectIndex()
     {
-        $this->middleware('auth');
+        return view('home.index');
     }
-
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
+    
     public function index()
     {
-        return view('home');
+        $registros = Product::where([
+            'ativo' => 'S'
+            ])->get();
+
+        return view('home.index', compact('registros'));
+    }
+
+    public function produto($id = null)
+    {
+        if( !empty($id) ) {
+            $registro = Product::where([
+                'id'    => $id,
+                'ativo' => 'S'
+                ])->first();
+
+            if( !empty($registro) ) {
+                return view('home.produto', compact('registro'));
+            }
+        }
+        return redirect()->route('index');
     }
 }

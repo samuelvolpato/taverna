@@ -15,8 +15,7 @@ class CriarTabelaProducts extends Migration
     {
         Schema::create('products', function(Blueprint $table)
         {
-            $table->bigIncrements('id');
-            $table->timestamps();
+            $table->bigIncrements('id')->unsigned();
             $table->string('nome', 50);
             $table->string('codigo', 10);
             $table->string('fabricante', 50);
@@ -24,6 +23,8 @@ class CriarTabelaProducts extends Migration
             $table->string('descricao', 100);
             $table->string('detalhes', 100);
             $table->string('img_path', 100)->nullable();
+            $table->enum('ativo', ['S', 'N'])->default('S');
+            $table->timestamps();
         });
     }
 

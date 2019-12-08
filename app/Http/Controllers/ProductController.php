@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Product;
 use Illuminate\Http\Request;
+use App\Http\Requests\ProductRequest;
+use Illuminate\Support\Str;
+
 
 class ProductController extends Controller
 {
@@ -12,31 +15,34 @@ class ProductController extends Controller
         return view('produtos.criar');
     }
 
-    public function store(Request $request)
+    public function store(ProductRequest $request)
     {
-        $request->validate([
-            'nome' => 'required|max:50',
-            'codigo' => 'required|numeric',
-            'fabricante' => 'required|max:50',
-            'preco' => 'required|numeric',
-            'descricao' => 'required|max:500',
-            'detalhes' => 'required|max:500',
-            'categoria' => 'required|max:100',
-            'img_path' => 'nullable|sometimes|image|mimes:jpg,jpeg,png,gif'
-        ]);
+        // $request->validate([
+        //     'nome' => 'required|max:50',
+        //     'codigo' => 'required|numeric',
+        //     'fabricante' => 'required|max:50',
+        //     'preco' => 'required|numeric',
+        //     'descricao' => 'required|max:500',
+        //     'detalhes' => 'required|max:500',
+        //     'categoria' => 'required|max:100',
+        //     'img_path' => 'nullable|sometimes|image|mimes:jpg,jpeg,png,gif',
+        //     'ativo' => 'required'
+        // ]);
+        $request->all();
+        
+        $arquivo = $request->file('img_path');
 
-        // $nomeCategoria = $request->file('categoria');
-        $imagem = $request->file('img_path');
-        if (empty($imagem)) {
+        if (empty($arquivo)) {
             $caminhoRelativo = null;
         } else {
-            $imagem->storePublicly('img');
-            $caminhoAbsoluto = public_path()."/storage/img";
-            $nomeArquivo = $imagem->getClientOriginalName();
-            $caminhoRelativo = "storage/img/$nomeArquivo";
-            $imagem->move($caminhoAbsoluto, $nomeArquivo);
+            $arquivo->storePublicly('uploads');
+            $caminhoAbsoluto = public_path()."/storage/uploads";
+            $nomeArquivo = $arquivo->getClientOriginalName();
+            $caminhoRelativo = "storage/uploads/$nomeArquivo";
+            $arquivo->move($caminhoAbsoluto, $nomeArquivo);
         }
 
+        
         $product = Product::create([
             'nome' => $request->input('nome'),
             'codigo' => $request->input('codigo'),
@@ -45,8 +51,10 @@ class ProductController extends Controller
             'descricao' => $request->input('descricao'),
             'detalhes' => $request->input('detalhes'),
             'categoria' => $request->input('categoria'),
-            'img_path' => $caminhoRelativo
+            'img_path' => $caminhoRelativo,
+            'ativo' => $request->input('ativo')
         ]);
+
 
         // $product = Product::create($request->all());
         $mensagem = "Cadastro de " . $request->input('nome')." criado com sucesso!";
@@ -77,7 +85,7 @@ class ProductController extends Controller
         $product = Product::find($id);
         $request->all();
 
-        $imagem = $request->file('img_pauth');
+        $imagem = $request->file('img_path');
 
         if (empty($imagem)) {
             $caminhoRelativo = $product->img_pauth;

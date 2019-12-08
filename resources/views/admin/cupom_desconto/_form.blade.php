@@ -1,8 +1,3 @@
-@extends('layouts.app')
-
-
-@section('content')
-
 <script type="text/javascript">
 
 var elementos = document.getElementsByTagName('textarea');
@@ -98,23 +93,9 @@ function contadorElemento1()
                 <div class="invalid-feedback">{{ $errors->first('detalhes') }}</div>
             </div>
             <div class="form-group">
-                <label for="img_path" class="text-white efeitoLink">Imagens do Produto</label>
-                <input type="file" class="form-control-file{{ $errors->has('img_path') ? ' is-invalid':'' }}" id="img_path" name="img_path">
-            <div class="invalid-feedback" style="display:inherit">{{ $errors->first('img_path') }}</div>
+                <label for="Img" class="text-white efeitoLink">Imagens do Produto</label>
+                <input type="file" id="Img" name="img_path">
             </div>
-
-            <div class="form-group row">
-                    <label for="" class="text-white col-md-4 col-form-label text-md-right">{{ __('Produto Ativo?') }}</label>
-
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="ativo" id="ativo_sim" value="S">
-                        <label class="form-check-label text-white" for="ativo_sim">{{ __('Sim') }}</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="ativo" id="ativo_nao" value="N">
-                        <label class="form-check-label text-white" for="ativo_nao">{{ __('Não') }}</label>
-                    </div>
-                </div>
             <button class="btn btnPadrao" id="cadastrar">Cadastrar Produto</button>
         </form>
         
@@ -125,5 +106,3 @@ function contadorElemento1()
                
             </div>
 </div>
-
-@endsection
