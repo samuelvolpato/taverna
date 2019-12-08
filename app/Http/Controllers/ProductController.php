@@ -133,5 +133,10 @@ class ProductController extends Controller
         return view ('informatica-teste')->with('products',$products);
     }
 
+    public function produto($id){
+        $product = Product::find($id);
+        return view('pagina_produto')->with('product', $product);
+    }
+
 }
 

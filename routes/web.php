@@ -62,9 +62,11 @@ Route::put('/produtos/update/{id}','ProductController@update');
 
 // show colecionaveis
 Route::get('/colecionaveis-teste', 'ProductController@action');
-// show informatic
-
+// show informatica
 Route::get('/informatica-teste', 'ProductController@info');
+// pagina do produto 
+Route::get('/pagina-produto/{id}', 'ProductController@produto');
+
 
 
 // Auth::routes();

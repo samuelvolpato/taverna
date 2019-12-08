@@ -115,7 +115,7 @@
                         <h2 class="text-white text-center">R$ <?php echo $infosColecionaveis[2]; ?></h2>
                     </div>
                     <div class="row justify-content-center mt-2">
-                        <button class="btn btnPadrao" title="Confira Já!">Confira Já! <i class="fas fa-thumbs-up"></i></button>
+                        <button class="btn btnPadrao" title="Confira Já!">Compre Já! <i class="fas fa-thumbs-up"></i></button>
                     </div>
                 </div>
             <?php } ?>         
@@ -151,7 +151,7 @@
                                 <h2 class="text-white text-center">R$ {{ $product->preco}}</h2>
                             </div>
                             <div class="row justify-content-center mt-2">
-                                <button class="btn btnPadrao" title="Confira Já!">Confira Já! <i class="fas fa-thumbs-up"></i></button>
+                                <button class="btn btnPadrao" title="Compre Já!"> <a href="/pagina-produto/{{ $product->id }}"> Compre Já! </a><i class="fas fa-thumbs-up"></i></button>
                             </div>
                         </div>
                         @endif

@@ -10,10 +10,10 @@
           <div id="carouselExampleControls" class="carousel slide border rounded" data-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img class="d-block w-100" src="{{ asset('img\controle_switch01.jpg') }}" alt="Primeiro Slide">
+                <img class="d-block w-100" src="{{ url($product->img_path)}}" alt="Primeiro Slide">
               </div>
               <div class="carousel-item">
-                <img class="d-block w-100" src="{{ asset('img\controle_switch02.jpg') }}" alt="Segundo Slide">
+                <img class="d-block w-100" src="{{ url($product->img_path)}}" alt="Segundo Slide">
               </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -29,7 +29,7 @@
   
         <div class="card col cardProduto">
           <div class="card-body">
-            <div class="card-title">Controle Com Fio PowerA Zelda Breath Of The Wild Para Nintendo Switch</div>
+            <div class="card-title">{{ $product->descricao}}</div>
             <div class="product-bottom text-white text-left">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -38,18 +38,18 @@
               <i class="far fa-star"></i>
             </div>
   
-            <div class="card-text codigoProduto">(Cód.86144985)</div>
+            <div class="card-text codigoProduto">{{ $product->codigo}}</div>
   
             <div class="text-center">
-              <span class="text-white">vendido por </span> <img src="{{ asset('img\loja_exemplo_logo_fundo.jpg') }}" width="48px"><a
+              <span class="text-white">{{ $product->fabricante}} </span> <img src="{{ asset('img\loja_exemplo_logo_fundo.jpg') }}" width="48px"><a
                 href="gameplay_loja.php"> GamePlay</a>
             </div>
   
-            <div class="card-text text-white">Compre agora esse controle foda pra caralho do Nintendo Switch</div>
+            <div class="card-text text-white">{{ $product->descricao}}</div>
   
-            <div class="card-text  text-right precoAntigo">R$:249,99</div>
+            <div class="card-text  text-right precoAntigo"> R${{ $product->preco}}</div>
             <div class="card-text  text-right text-white descontoPreco">(12% de desconto!)</div>
-            <div class="card-text precoProduto text-right">R$:219,99</div>
+            <div class="card-text precoProduto text-right"></div>
   
             <div class="text-right">
               <button class="btn btn-dark btnComprar"><i class="fas fa-shopping-cart"></i> Comprar</button>
