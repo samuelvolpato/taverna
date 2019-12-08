@@ -131,6 +131,14 @@
     <section class="container my-3 p-0">
 
         <div class="row m-0 px-0 py-2" style="width: 100%">
+
+                <!-- @foreach ($products as $product)
+                    <div class="product">
+                        <a href="#"><img src="{{ $product->img_path }}" alt="product"></a>
+                        <a href="#"><div class="product-name">{{ $product->nome }}</div></a>
+                        <div class="product-price">{{ $product->preco }}</div>
+                    </div>
+                @endforeach -->
                 
             <?php foreach ($produtosCard as $nomeProduto => $infosProduto) { ?>
                 <div class="col-lg-3 col-sm-6 m-0 p-3">
@@ -160,7 +168,7 @@
                     </div>
                 </div>
             <?php } ?>
-            
+        </div>
     </section>
     
 @endsection
