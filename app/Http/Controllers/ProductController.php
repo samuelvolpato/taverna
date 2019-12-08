@@ -122,6 +122,16 @@ class ProductController extends Controller
         $mensagem = "Update de " . $request->input('nome')." executado com sucesso!";
         return view ('produtos.criar')->with('retorno', $mensagem);
     }    
+    public function action(){
+
+        $products = Product::all();
+        return view ('colecionaveis-teste')->with('products',$products);
+    }
+    public function info(){
+
+        $products = Product::all();
+        return view ('informatica-teste')->with('products',$products);
+    }
 
 }
 

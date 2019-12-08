@@ -13,9 +13,10 @@
 
 //Route::get('/', 'IndexController@index')->name('index');
 
-// Route::get('/colecionaveis', function () {
-//     return view('colecionaveis');
-// })->name('colecionaveis');
+Route::get('/colecionaveis', function () {
+    return view('colecionaveis');
+})->name('colecionaveis');
+
 
 // Route::get('/contato', function () {
 //     return view('contato');
@@ -59,7 +60,11 @@ Route::delete('/produtos/delete/{id}','ProductController@delete')->name('product
 Route::get('/produtos/update/{id}','ProductController@edit');
 Route::put('/produtos/update/{id}','ProductController@update');
 
+// show colecionaveis
+Route::get('/colecionaveis-teste', 'ProductController@action');
+// show informatic
 
+Route::get('/informatica-teste', 'ProductController@info');
 
 
 // Auth::routes();
