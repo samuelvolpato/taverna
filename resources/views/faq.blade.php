@@ -8,7 +8,7 @@
 
         <div class="container">
             <h3 class="h3-faq"> Como devo proceder para executar o cadastro?</h3>
-            <p class="p-texto"> Acesse o nosso link Cadastro acima no nosso menu ou clique <a href="cadastro.php">aqui</a></p>
+            <p class="p-texto"> Acesse o nosso link Cadastro acima no nosso menu ou clique <a href= {{ route('register') }} >aqui</a></p>
         </div>
         <div class="container">
             <h3 class="h3-faq"> Porque o nome Taverna?</h3>
