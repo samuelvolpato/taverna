@@ -19,7 +19,7 @@ class ProductsTableSeeder extends Seeder
             'preco' => '100',
             'descricao' => 'boneco minato colecionavel',
             'detalhes' => '30 cm, durepox',
-            'img_path' => 'storage/app/img/minato.jpg',
+            'img_path' => 'public/img/minato.jpg',
             'categoria' => 'colecionaveis'
         ]);
 
@@ -30,7 +30,7 @@ class ProductsTableSeeder extends Seeder
             'preco' => '99,99',
             'descricao' => 'boneco naruto colecionavel',
             'detalhes' => '29 cm, durepox',
-            'img_path' => 'storage/app/img/naruto.jpg',
+            'img_path' => 'public/img/naruto.jpg',
             'categoria' => 'colecionaveis'
         ]);
 
@@ -41,7 +41,7 @@ class ProductsTableSeeder extends Seeder
             'preco' => '110',
             'descricao' => 'boneco sasuke colecionavel',
             'detalhes' => '27 cm, durepox',
-            'img_path' => 'storage/app/img/sasuke.jpg',
+            'img_path' => 'public/img/sasuke.jpg',
             'categoria' => 'colecionaveis'
         ]);
 

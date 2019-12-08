@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'IndexController@index')->name('index');
+//Route::get('/', 'IndexController@index')->name('index');
 
 // Route::get('/colecionaveis', function () {
 //     return view('colecionaveis');
