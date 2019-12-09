@@ -111,7 +111,7 @@ function contadorElemento1()
             </div>
             <div class="form-group">
                 <label for="img_path" class="text-white efeitoLink">Imagens do Produto</label>
-                <input type="file" class="form-control-file{{ $errors->has('img_path') ? ' is-invalid':'' }}" id="img_path" name="img_path">
+                <input type="file" class="text-white form-control-file{{ $errors->has('img_path') ? ' is-invalid':'' }}" id="img_path" name="img_path">
             <div class="invalid-feedback" style="display:inherit">{{ $errors->first('img_path') }}</div>
             </div>
 
