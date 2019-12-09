@@ -10,10 +10,10 @@
           <div id="carouselExampleControls" class="carousel slide border rounded" data-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img class="d-block w-100" src="{{ url($product->img_path)}}" alt="Primeiro Slide">
+                <img class="d-block w-100" src="{{ url($product->avatar_image)}}" alt="Primeiro Slide">
               </div>
               <div class="carousel-item">
-                <img class="d-block w-100" src="{{ url($product->img_path)}}" alt="Segundo Slide">
+                <img class="d-block w-100" src="{{ url($product->avatar_image)}}" alt="Segundo Slide">
               </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">

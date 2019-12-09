@@ -30,9 +30,9 @@ Route::get('/colecionaveis', function () {
 //     return view('sobrenos');
 // })->name('sobrenos');
 
-// Route::get('/pagina_produto', function () {
-//     return view('pagina_produto');
-// })->name('pagina_produto');
+Route::get('/pagina_produto', function () {
+    return view('pagina_produto');
+})->name('pagina_produto');
 
 // Route::get('/moda', function () {
 //     return view('moda');
