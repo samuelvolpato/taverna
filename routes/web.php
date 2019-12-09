@@ -64,19 +64,27 @@ Route::put('/produtos/update/{id}','ProductController@update');
 Route::get('/colecionaveis-teste', 'ProductController@action');
 // show informatica
 Route::get('/informatica-teste', 'ProductController@info');
+//show moda 
+Route::get('/moda-teste', 'ProductController@moda');
+//show livros 
+Route::get('/livros-teste', 'ProductController@livro');
+//show games
+Route::get('/games-teste', 'ProductController@games');
+
 // pagina do produto 
 Route::get('/pagina-produto/{id}', 'ProductController@produto');
+Route::get('/cart', 'ProductController@index')->name('index');
 
 
 
 // Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/cart', function () { return view('cart.index');})->name('index');
+Route::get('/cart', 'CartController@index')->name('index');
 Auth::routes(); 
 
 Route::get('/', 'HomeController@index')->name('index');
-Route::get('/product/{id}', 'HomeController@product')->name('product');
+Route::get('/product/{id}', 'HomeController@produto')->name('product');
 // Route::get('/cart', 'CartController@index')->name('cart.index');
 Route::get('/cart/add', function() {
     return redirect()->route('index');

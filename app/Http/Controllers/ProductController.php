@@ -132,11 +132,21 @@ class ProductController extends Controller
         $products = Product::all();
         return view ('informatica-teste')->with('products',$products);
     }
-
-    public function produto($id){
-        $product = Product::find($id);
-        return view('pagina_produto')->with('product', $product);
+    public function moda(){
+        $products = Product::all();
+        return view('moda-teste')->with('products', $products);
     }
-
+    public function livro(){
+        $products = Product::all();
+        return view('livros-teste')->with('products', $products);
+    }
+    public function games(){
+        $products = Product::all();
+        return view('games-teste')->with('products', $products);
+    }
+    public function produto($id){
+        $products = Product::find($id);
+        return view('pagina_produto')->with('product', $products);
+    }
 }
 
