@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'failed' => 'Essas credenciais não foram encontradas em nossos registros.',
-    'throttle' => 'Muitas tentativas de login. Tente novamente em :seconds segundos.',
+    'failed' => 'Falha ao efetuar o login. Por favor, revise seu email e senha e tente novamente.',
+    'throttle' => 'Falha ao efetuar o login. Por favor, aguarde alguns segundos e tente novamente.',
 
 ];

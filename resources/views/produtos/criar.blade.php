@@ -47,10 +47,14 @@ function contadorElemento1()
 
 <div class="container">
     
-@if(!empty($retorno)) 
+@if(!empty($retorno))
     <div class="row justify-content-center">
-        <div class="col-12 text-center">
-            <h3 class="alert alert-success">{{ $retorno }}</h3>
+        <div class="card text-white bg-dark mb-3 col" style="max-width: 18rem;">
+            <div class="card-header">Cadastro de Produtos</div>
+            <div class="card-body">
+                <h5 class="card-title">Sucesso!</h5>
+            <p class="card-text">{{ $retorno}}</p>
+            </div>
         </div>
     </div>
 @endif
@@ -58,7 +62,7 @@ function contadorElemento1()
 
 <div class="row justify-content-center">
 
-    <form action="{{ route('cadastro_produto') }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('produtos.cadastro') }}" method="POST" enctype="multipart/form-data">
         @csrf
             <div class="form-group">
                 <label for="nome" class="text-white efeitoLink">Nome do Produto</label>
@@ -75,27 +79,24 @@ function contadorElemento1()
                 <input type="text" class="form-control{{$errors->has('fabricante') ? ' is-invalid' : ''}}" value="{{ old('fabricante') }}" id="fabricante" placeholder="Informe o fabricante do produto" name="fabricante">
                 <div class="invalid-feedback">{{ $errors->first('fabricante') }}</div>
             </div>
-            {{-- <div class="form-group">
+
+            <div class="form-group">
                 <label for="categoria" class="text-white efeitoLink">Categoria do Produto</label>
-                <input type="text" class="form-control{{$errors->has('categoria') ? ' is-invalid' : ''}}" value="{{ old('categoria') }}" id="categoria" placeholder="Informe a categoria do produto" name="categoria">
-                <div class="invalid-feedback">{{ $errors->first('categoria') }}</div>
-            </div> --}}
+                <select class="custom-select" name="categoria">
+                    <option selected>Escolha a Categoria do Produto</option>
+                    <option value="colecionaveis">Colecionáveis</option>
+                    <option value="games">Games</option>
+                    <option value="informatica">Informática</option>
+                    <option value="livros">Livros</option>
+                    <option value="moda">Moda</option>
+                    <option value="musica">Música</option>
+                </select>
+            </div>
+
             <div class="form-group">
-                    <label for="categoria" class="text-white efeitoLink">Categoria do Produto</label>
-                    <select class="custom-select" name="categoria">
-                        <option selected>Escolha a Categoria do Produto</option>
-                        <option value="colecionaveis">Colecionáveis</option>
-                        <option value="games">Games</option>
-                        <option value="informatica">Informática</option>
-                        <option value="livros">Livros</option>
-                        <option value="moda">Moda</option>
-                        <option value="musica">Música</option>
-                    </select>
-                </div>
-            <div class="form-group">
-                <label for="preco" class="text-white efeitoLink">Preço</label>
-                <input type="text" class="form-control{{$errors->has('preco') ? ' is-invalid' : ''}}" value="{{ old('preco') }}" id="preco" placeholder="Informe o preço" name="preco">
-                <div class="invalid-feedback">{{ $errors->first('preco') }}</div>
+                <label for="valor" class="text-white efeitoLink">Preço</label>
+                <input type="text" class="form-control{{$errors->has('valor') ? ' is-invalid' : ''}}" value="{{ old('valor') }}" id="valor" placeholder="Informe o preço" name="valor">
+                <div class="invalid-feedback">{{ $errors->first('valor') }}</div>
             </div>
             <div class="form-group">
                 <label for="descricao" class="text-white efeitoLink">Descrição do Produto</label>
@@ -110,30 +111,31 @@ function contadorElemento1()
                 <div class="invalid-feedback">{{ $errors->first('detalhes') }}</div>
             </div>
             <div class="form-group">
-                <label for="img_path" class="text-white efeitoLink">Imagens do Produto</label>
-                <input type="file" class="text-white form-control-file{{ $errors->has('img_path') ? ' is-invalid':'' }}" id="img_path" name="img_path">
-            <div class="invalid-feedback" style="display:inherit">{{ $errors->first('img_path') }}</div>
+                <label for="imagem" class="text-white efeitoLink">Imagens do Produto</label>
+                <input type="file" class="text-white form-control-file{{ $errors->has('imagem') ? ' is-invalid':'' }}" id="imagem" name="imagem">
+            <div class="invalid-feedback" style="display:inherit">{{ $errors->first('imagem') }}</div>
             </div>
 
             <div class="form-group row">
-                    <label for="" class="text-white col-md-4 col-form-label text-md-right">{{ __('Produto Ativo?') }}</label>
+                <label for="" class="text-white col-md-4 col-form-label text-md-right">{{ __('Produto Ativo?') }}</label>
 
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="ativo" id="ativo_sim" value="S">
-                        <label class="form-check-label text-white" for="ativo_sim">{{ __('Sim') }}</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="ativo" id="ativo_nao" value="N">
-                        <label class="form-check-label text-white" for="ativo_nao">{{ __('Não') }}</label>
-                    </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="ativo" id="ativo_sim" value="S">
+                    <label class="form-check-label text-white" for="ativo_sim">{{ __('Sim') }}</label>
                 </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="ativo" id="ativo_nao" value="N">
+                    <label class="form-check-label text-white" for="ativo_nao">{{ __('Não') }}</label>
+                </div>
+            </div>
+
             <button class="btn btnPadrao" id="cadastrar">Cadastrar Produto</button>
         </form>
         
     </div>
             <div class="row justify-content-center mt-5">
                 
-                        <a class="btn btnPadrao col-5" id="cadastrar" href="{{ route('products-show')}}">Visualizar Produtos</a>
+                        <a class="btn btnPadrao col-5" id="cadastrar" href="{{ route('produtos.show')}}">Visualizar Produtos</a>
                
             </div>
 </div>

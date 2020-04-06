@@ -6,6 +6,7 @@
 
 require('./bootstrap');
 require('./jquery.mask');
+require('./carrinho');
 
 window.Vue = require('vue');
 

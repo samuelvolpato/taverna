@@ -12,6 +12,8 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/jquery.mask.js') }}" defer></script>
+    <script src="{{ asset('js/zoomsl.js') }}" defer></script>
+    <script src="{{ asset('js/carrinho.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -59,42 +61,48 @@
                                     </div>
                                     @else
                                         <div class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuButton">
-                                            <a class="btn btnPadrao border-0 text-white efeitoLink" href="{{ url('/auth/register')}}">{{ __('.minha conta') }}</a>
+                                                @if (Auth::user()->name == "Admin")
+                                                <a class="btn btnPadrao border-0 text-white efeitoLink" href="/produtos/criar">{{ __('.criar produto') }}</a>
+                                                <a class="btn btnPadrao border-0 text-white efeitoLink" href="/produtos/show">{{ __('.listar produtos') }}</a>
+                                                    
+                                                @endif
+                                            <a class="btn btnPadrao border-0 text-white efeitoLink" href="{{ route('carrinho.compras') }}">{{ __('.minhas compras') }}</a>
                                             <a onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();" class="btn btnPadrao border-0 text-white efeitoLink" href="{{ route('logout') }}">{{ __('.sair') }}</a>
                                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                                 @csrf
                                             </form>
                                         </div>
+                                        
                                 </div>
                                 @endguest
-                            <a class="btn btnPadrao border-0" href="{{ route('login') }}" title="Acessar lista"><i class="fas fa-heart p-0 btnUserWishCartSearchDrop"></i></a>
-                            <a class="btn btnPadrao border-0" href="{{ route('login') }}" title="Acessar carrinho"><i class="fas fa-shopping-cart p-0 btnUserWishCartSearchDrop"></i></a>
+                            <a class="btn btnPadrao border-0" href="{{ route('indisponivel') }}" title="Acessar lista"><i class="fas fa-heart p-0 btnUserWishCartSearchDrop"></i></a>
+                            <a class="btn btnPadrao border-0" href="{{ route('carrinho.index') }}" title="Acessar carrinho"><i class="fas fa-shopping-cart p-0 btnUserWishCartSearchDrop"></i></a>
                         </div>
                     </nav>  
         
                 </div>
                 <div class="collapse nav container-fluid justify-content-center" id="navbarNav">
                     <ul class="d-flex flex-md-row flex-column p-0" >
-                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="#">.games</a></button></li>
-                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="#">.colecionaveis</a></button></li>
-                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href=#>.moda</a></button></li>
-                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href=#>.informatica</a></button></li>
-                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href=#>.livros</a></button></li>
-                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink font-weight-bold">.todos os departamentos</button></li>        
-                    </ul>
+                    <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="{{ route('games')}}">.games</a></button></li>
+                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="{{ route('colecionaveis')}}">.colecionaveis</a></button></li>
+                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="{{ route('moda')}}">.moda</a></button></li>
+                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="{{ route('informatica')}}">.informatica</a></button></li>
+                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="{{ route('livros')}}">.livros</a></button></li>
+                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="{{ route('musica')}}">.música</a></button></li>                     </ul>
                 </div>
 
                 <div class="collapse nav container" id="navbarNavDropdown">
                         <ul class="d-flex flex-column p-0" >
-                            <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="#">.games</a></button></li>
-                            <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="#">.colecionaveis</a></button></li>
-                            <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="#">.moda</a></button></li>
-                            <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="#">.informatica</a></button></li>
-                            <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="#">.livros</a></button></li>
-                            <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink font-weight-bold">.todos os departamentos</button></li>        
+                            <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="{{ route('games')}}">.games</a></button></li>
+                            <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="{{ route('colecionaveis')}}">.colecionaveis</a></button></li>
+                            <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="{{ route('moda')}}">.moda</a></button></li>
+                            <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="{{ route('informatica')}}">.informatica</a></button></li>
+                            <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="{{ route('livros')}}">.livros</a></button></li>
+                            <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="{{ route('musica')}}">.música</a></button></li>        
                         </ul>
                     </div>
+                    
             </div>
         </header>
 
@@ -108,16 +116,15 @@
             <div class="container-fluid justify-content-center mt-2 ">
                 <div class="row">        
                     <ul class="col nav flex-row justify-content-center p-0">
-                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="#">.sobre nós</a></button></li>
-                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="#">.dúvidas</a></button></li>
-                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="">.central de atendimento</a></button></li>
-                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="">.venda com a gente</a></button></li>
+                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="{{ route('sobrenos')}}">.sobre nós</a></button></li>
+                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="{{ route('faq')}}">.dúvidas</a></button></li>
+                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="{{ route('contato')}}">.central de atendimento</a></button></li>
+                        <li class="nav-item mx-4"><button class="btn btnPadrao border-0 text-white efeitoLink"><a href="{{ route('indisponivel')}}">.venda com a gente</a></button></li>
                     </ul>
                 </div>
                 <div class="row p-2 justify-content-center">
                     <div class="col-md-3 col">
-                        <img src="{{ asset('img/taverna_logo_nav.png') }}" class="img-fluid p-2" title="Taverna.com">
-        
+                        <a class="img-fluid p-2" href="{{ route('index') }}" title="Taverna.com"><img src="{{ asset('img/taverna_logo_nav.png') }}" alt=""></a>    
                     </div>
         
                     <div class="col">
@@ -139,5 +146,7 @@
             </div>
         </footer>
     </div>
+    @stack('scripts')
 </body>
 </html>
+        

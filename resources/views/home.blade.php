@@ -4,8 +4,8 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Olá, {{ Auth::user()->name }}</div>
+            <div class="card bg-dark text-white">
+            <div class="card-header">Olá, {{ Auth::user()->name }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -13,13 +13,11 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    
 
-                    Seja bem vindo e boas compras!
+                    Você pode acessar o seu perfil através do ícone de usuário ( <i class="fas fa-user p-0 btnUserWishCartSearchDrop"></i> ) acima, ou começar as suas compras. Aproveite!
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 @endsection

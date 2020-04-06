@@ -3,19 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
-use App\Product;
+use App\Produto;
 
 class HomeController extends Controller
 {
-    public function redirectIndex()
-    {
-        return view('home.index');
-    }
-    
     public function index()
     {
-        $registros = Product::where([
+        $registros = Produto::take(8)->inRandomOrder()->where([
             'ativo' => 'S'
             ])->get();
 
@@ -25,7 +19,7 @@ class HomeController extends Controller
     public function produto($id = null)
     {
         if( !empty($id) ) {
-            $registro = Product::where([
+            $registro = Produto::where([
                 'id'    => $id,
                 'ativo' => 'S'
                 ])->first();

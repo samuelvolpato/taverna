@@ -168,7 +168,7 @@ footer span .fab {
 .barraChamada {
     border: 2px solid transparent;
     border-radius: 7px;
-    background-color: rgb(95, 91, 91);
+    background-color: rgb(229, 240, 82);
 }
 
 .barraChamada h3 {
@@ -233,7 +233,7 @@ footer span .fab {
 }
 
 .faq h3 {
-    color: darkgray;
+    color: white;
 }
 
 .faq p {
@@ -305,4 +305,9 @@ footer p {
       background-color: white!important;
       width: 280px;
     }
+
+
   }
+  
+
+ 

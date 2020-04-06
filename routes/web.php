@@ -11,99 +11,28 @@
 |
 */
 
-//Route::get('/', 'IndexController@index')->name('index');
-
-Route::get('/colecionaveis', function () {
-    return view('colecionaveis');
-})->name('colecionaveis');
-
-
-// Route::get('/contato', function () {
-//     return view('contato');
-// })->name('contato');
-
-// Route::get('/faq', function () {
-//     return view('faq');
-// })->name('faq');
-
-// Route::get('/sobrenos', function () {
-//     return view('sobrenos');
-// })->name('sobrenos');
-
-Route::get('/pagina_produto', function () {
-    return view('pagina_produto');
-})->name('pagina_produto');
-
-// Route::get('/moda', function () {
-//     return view('moda');
-// })->name('moda');
-
-// Route::get('/livros', function () {
-//     return view('livros');
-// })->name('livros');
-
-// Route::get('/informatica', function () {
-//     return view('informatica');
-// })->name('informatica');
-
-// Route::get('/games', function () {
-//     return view('games');
-// })->name('games');
-
-Route::get('/produtos/criar', 'ProductController@create')->name('products-create');
-Route::post('/produtos/criar', 'ProductController@store')->name('cadastro_produto');
-//show 
-Route::get('/produtos/show','ProductController@show')->name('products-show');
-//delete 
-Route::delete('/produtos/delete/{id}','ProductController@delete')->name('products-delete');
-//update
-Route::get('/produtos/update/{id}','ProductController@edit');
-Route::put('/produtos/update/{id}','ProductController@update');
-
-// show colecionaveis
-Route::get('/colecionaveis-teste', 'ProductController@action');
-// show informatica
-Route::get('/informatica-teste', 'ProductController@info');
-//show moda 
-Route::get('/moda-teste', 'ProductController@moda');
-//show livros 
-Route::get('/livros-teste', 'ProductController@livro');
-//show games
-Route::get('/games-teste', 'ProductController@games');
-
-// pagina do produto 
-Route::get('/pagina-produto/{id}', 'ProductController@produto');
-Route::get('/cart', 'ProductController@index')->name('index');
-
-
-
-// Auth::routes();
-
-// Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/cart', 'CartController@index')->name('index');
-Auth::routes(); 
+Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('index');
-Route::get('/product/{id}', 'HomeController@produto')->name('product');
-// Route::get('/cart', 'CartController@index')->name('cart.index');
-Route::get('/cart/add', function() {
-    return redirect()->route('index');
-});
-Route::post('/cart/add', 'CartController@adicionar')->name('cart.adicionar');
-Route::delete('/cart/remove', 'CartController@remover')->name('cart.remover');
-Route::post('/cart/conclude', 'CartController@concluir')->name('cart.concluir');
-Route::get('/cart/shoppings', 'CartController@compras')->name('cart.shoppings');
-Route::post('/cart/cancel', 'CartController@cancelar')->name('cart.cancel');
-Route::post('/cart/desconto', 'CartController@desconto')->name('cart.desconto');
+Route::get('/produto/{id}', 'HomeController@produto')->name('produto');
+Route::get('/carrinho', 'CarrinhoController@index')->name('carrinho.index');
+Route::get('/carrinho/adicionar', function() { return redirect()->route('index');});
+Route::post('/carrinho/adicionar', 'CarrinhoController@adicionar')->name('carrinho.adicionar');
+
+Route::delete('/carrinho/remover', 'CarrinhoController@remover')->name('carrinho.remover');
+Route::post('/carrinho/concluir', 'CarrinhoController@concluir')->name('carrinho.concluir');
+Route::get('/carrinho/compras', 'CarrinhoController@compras')->name('carrinho.compras');
+Route::post('/carrinho/cancelar', 'CarrinhoController@cancelar')->name('carrinho.cancelar');
+Route::post('/carrinho/desconto', 'CarrinhoController@desconto')->name('carrinho.desconto');
 
 // rotas do admin
-Route::group(['prefix' => 'admin'], function () {
-    Route::get('products', 'Admin\ProductController@index')->name('admin.produtos');
-    Route::get('products/add', 'Admin\ProductController@adicionar')->name('admin.products.add');
-    Route::post('products/store', 'Admin\ProductController@salvar')->name('admin.products.store');
-    Route::get('products/edit/{id}', 'Admin\ProductController@editar')->name('admin.products.edit');
-    Route::put('products/update/{id}', 'Admin\ProductController@atualizar')->name('admin.products.update');
-    Route::get('products/deletar/{id}', 'Admin\ProductController@deletar')->name('admin.products.delete');
+    Route::group(['prefix' => 'admin'], function () {
+    Route::get('produtos', 'Admin\ProdutoController@index')->name('admin.produtos');
+    Route::get('produtos/adicionar', 'Admin\ProdutoController@adicionar')->name('admin.produtos.adicionar');
+    Route::post('produtos/salvar', 'Admin\ProdutoController@salvar')->name('admin.produtos.salvar');
+    Route::get('produtos/editar/{id}', 'Admin\ProdutoController@editar')->name('admin.produtos.editar');
+    Route::put('produtos/atualizar/{id}', 'Admin\ProdutoController@atualizar')->name('admin.produtos.atualizar');
+    Route::get('produtos/deletar/{id}', 'Admin\ProdutoController@deletar')->name('admin.produtos.deletar');
 
     Route::get('cupons', 'Admin\CupomDescontoController@index')->name('admin.cupons');
     Route::get('cupons/adicionar', 'Admin\CupomDescontoController@adicionar')->name('admin.cupons.adicionar');
@@ -113,3 +42,51 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('cupons/deletar/{id}', 'Admin\CupomDescontoController@deletar')->name('admin.cupons.deletar');
 
 });
+
+Route::get('/produtos/show','ProdutoController@show')->name('produtos.show');
+Route::delete('/produtos/delete/{id}','ProdutoController@delete')->name('produtos.delete');
+Route::get('/produtos/update/{id}','ProdutoController@edit')->name('produtos.edit');
+Route::put('/produtos/update/{id}','ProdutoController@update');
+Route::get('/produtos/criar', 'ProdutoController@create')->name('produtos.criar');
+Route::post('/produtos/criar', 'ProdutoController@store')->name('produtos.cadastro');
+Route::get('/indisponivel', function(){ return view ('errors.503');})->name('indisponivel');
+
+// show colecionaveis
+Route::get('/produtos/colecionaveis', 'ProdutoController@action')->name('colecionaveis');
+// show informatica
+Route::get('/produtos/informatica', 'ProdutoController@info')->name('informatica');
+//show moda 
+Route::get('/produtos/moda', 'ProdutoController@moda')->name('moda');
+//show livros 
+Route::get('/produtos/livros', 'ProdutoController@livro')->name('livros');
+//show games
+Route::get('/produtos/games', 'ProdutoController@games')->name('games');
+//show musica 
+Route::get('/produtos/musica', 'ProdutoController@musica')->name('musica');
+//show sobre nos 
+Route::get('/sobrenos', function(){ return view ('outros.sobrenos');})->name('sobrenos');
+//show duvidas 
+Route::get('/faq', function(){ return view ('outros.faq');})->name('faq');
+//show central de atendimento 
+Route::get('/contato', function(){ return view ('outros.contato');})->name('contato');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
